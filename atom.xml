@@ -3,11 +3,11 @@
   <title>啊嘞</title>
   
   <subtitle>相信自己的耳朵</subtitle>
-  <link href="http://example.com/atom.xml" rel="self"/>
+  <link href="https://alistarofficial.github.io/atom.xml" rel="self"/>
   
-  <link href="http://example.com/"/>
+  <link href="https://alistarofficial.github.io/"/>
   <updated>2023-01-14T18:18:38.408Z</updated>
-  <id>http://example.com/</id>
+  <id>https://alistarofficial.github.io/</id>
   
   <author>
     <name>Alistar</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>Hello World</title>
-    <link href="http://example.com/2023/01/15/hello-world/"/>
-    <id>http://example.com/2023/01/15/hello-world/</id>
+    <link href="https://alistarofficial.github.io/2023/01/15/hello-world/"/>
+    <id>https://alistarofficial.github.io/2023/01/15/hello-world/</id>
     <published>2023-01-14T18:18:38.408Z</published>
     <updated>2023-01-14T18:18:38.408Z</updated>
     
