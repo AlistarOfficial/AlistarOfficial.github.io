@@ -3,17 +3,13 @@
   <entry>
     <title>Alistarの作品集</title>
     <url>/2023/01/15/%E4%BD%9C%E5%93%81%E9%9B%86/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css"><script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="https://cdn.jsdelivr.net/npm/meting/dist/Meting.min.js"></script><h2 id="混音制作"><a href="#混音制作" class="headerlink" title="混音制作"></a>混音制作</h2>
-    <div id="aplayer-hTQbCYrU" class="aplayer aplayer-tag-marker meting-tag-marker"
-         data-id="6781450024" data-server="netease" data-type="playlist" data-mode="circulation" data-autoplay="false" data-mutex="true" data-listmaxheight="200px" data-preload="none" data-theme="#ad7a86"
-    ></div>
+    <content><![CDATA[<h2 id="混音制作"><a href="#混音制作" class="headerlink" title="混音制作"></a>混音制作</h2><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css">
+<script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js" ></script>
+<script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js" ></script>
+<meting-js server="netease" type="playlist" id="6781450024" listmaxheight="200px"></meting-js>
 <span id="more"></span>
 
-<h2 id="Beat制作"><a href="#Beat制作" class="headerlink" title="Beat制作"></a>Beat制作</h2>
-    <div id="aplayer-ffAKHEQB" class="aplayer aplayer-tag-marker meting-tag-marker"
-         data-id="7381042416" data-server="netease" data-type="playlist" data-mode="circulation" data-autoplay="false" data-mutex="true" data-listmaxheight="200px" data-preload="none" data-theme="#ad7a86"
-    ></div>
-
+<h2 id="Beat制作"><a href="#Beat制作" class="headerlink" title="Beat制作"></a>Beat制作</h2><p><meting-js server="netease" type="playlist" id="7381042416" listmaxheight="200px"></meting-js></p>
 ]]></content>
   </entry>
 </search>
