@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://alistarofficial.github.io/2023/01/15/%E4%BD%9C%E5%93%81%E9%9B%86/</loc>
+    
+    <lastmod>2023-01-15</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://alistarofficial.github.io/friends/index.html</loc>
     
     <lastmod>2023-01-14</lastmod>
@@ -28,19 +37,10 @@
     <priority>0.6</priority>
   </url>
   
-  <url>
-    <loc>https://alistarofficial.github.io/2023/01/15/hello-world/</loc>
-    
-    <lastmod>2023-01-14</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
 
   <url>
     <loc>https://alistarofficial.github.io/</loc>
-    <lastmod>2023-01-14</lastmod>
+    <lastmod>2023-01-15</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
