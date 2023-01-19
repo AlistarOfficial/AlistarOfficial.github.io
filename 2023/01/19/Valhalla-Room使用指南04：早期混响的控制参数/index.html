@@ -15,7 +15,7 @@
         name="viewport"
         content="width=device-width, initial-scale=1, maximum-scale=1"
       />
-      <title>归档: 2023 |  啊嘞</title>
+      <title>Valhalla Room使用指南04：早期混响的控制参数 |  啊嘞</title>
   <meta name="generator" content="hexo-theme-ayer">
       
       <link rel="shortcut icon" href="/favicon.ico" />
@@ -67,257 +67,218 @@ var _hmt = _hmt || [];
       
     <main class="content on">
       <section class="outer">
+  <article
+  id="post-Valhalla-Room使用指南04：早期混响的控制参数"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h1 class="article-title sea-center" style="border-left:0" itemprop="name">
+  Valhalla Room使用指南04：早期混响的控制参数
+</h1>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2023/01/19/Valhalla-Room%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%9704%EF%BC%9A%E6%97%A9%E6%9C%9F%E6%B7%B7%E5%93%8D%E7%9A%84%E6%8E%A7%E5%88%B6%E5%8F%82%E6%95%B0/" class="article-date">
+  <time datetime="2023-01-19T05:00:32.000Z" itemprop="datePublished">2023-01-19</time>
+</a> 
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/%E6%8F%92%E4%BB%B6%E8%AF%B4%E6%98%8E%E6%96%87%E6%A1%A3/">插件说明文档</a>
+  </div>
   
-  <ul class="ads">
-    
-        <li>
-            <a href="">
-                <img src="" width="" alt="">
-            </a>
-        </li>
-    
-        <li>
-            <a href="">
-                <img src="" width="" alt="">
-            </a>
-        </li>
-    
+<div class="word_count">
+    <span class="post-time">
+        <span class="post-meta-item-icon">
+            <i class="ri-quill-pen-line"></i>
+            <span class="post-meta-item-text"> 字数统计:</span>
+            <span class="post-count">1k</span>
+        </span>
+    </span>
+
+    <span class="post-time">
+        &nbsp; | &nbsp;
+        <span class="post-meta-item-icon">
+            <i class="ri-book-open-line"></i>
+            <span class="post-meta-item-text"> 阅读时长≈</span>
+            <span class="post-count">3 分钟</span>
+        </span>
+    </span>
+</div>
+ 
+    </div>
+      
+    <div class="tocbot"></div>
+
+
+
+
+  
+    <div class="article-entry" itemprop="articleBody">
+       
+  <blockquote>
+<p>本文是 Valhalla Room 插件使用指南的第四篇，详细介绍了早期反射的详细控制项，了解这些知识之后，可以让我们在塑造混响时更得心应手。</p>
+</blockquote>
+<span id="more"></span>
+
+<p><em>翻译：Alistar</em></p>
+<p><img src="https://cdn.staticaly.com/gh/AlistarOfficial/Image-saving@master/20230116/%E6%97%A9%E6%9C%9F%E5%8F%8D%E5%B0%84%E7%9A%84%E6%8E%A7%E5%88%B6%E5%8F%82%E6%95%B0.v1oj3369xxs.jpg"></p>
+<hr>
+<p>Valhalla Room 可以分为有两个独立的混响部分，即<strong>早期和晚期</strong>。可以点击插件顶部的 Early 按钮来调节早期混响。</p>
+<p>把 <code>Depth</code> 滑块设置到0%，就可以单独听到早期混响部分。<code>Depth</code> 值越高，听到的晚期混响也就越多，当设置为100% 时，就只能听到晚期混响。<br>以下是每个参数的概览：</p>
+<h3 id="Early-Size"><a href="#Early-Size" class="headerlink" title="Early Size"></a>Early Size</h3><p>以毫秒为单位，调整早期脉冲能量的时长。10 到 50 ms 的长度可以模拟较小空间中早期反射的声学效果，也可以创造出一个很宽的立体声像，并且没有晚期混响（当 <code>Depth</code> 设置到0%）。当 <code>Early Size</code> 在 50 到 100 ms之间时，可以营造出一种“被压缩”的房间的感觉，听上去会像是早期的Attack被限制器或者磁带饱和抑制住了一样。而大于 100 ms 的设置会听起来像门限混响（Gated Reverb），并且当早期混响能量发送给晚期混响时（关于早期混响的发送见下文），可以创造出一种慢 Attack 的感觉。较大的 <code>Early Size</code> 值可以创造出长的门限混响的声音。</p>
+<h3 id="Early-Cross"><a href="#Early-Cross" class="headerlink" title="Early Cross"></a>Early Cross</h3><p>控制了早期混响立体声的交叉混合。当设置为 0% 时，左右声道之间的信号不会相互混合，也就是说，左声道中不会有任何右声道信号的早期反射声。超过 0% 的参数值会使左右声道之间的信号混合，增加回声密度。一般来说，较低的 <code>Early Cross</code> 值能够使得混音中的空间成像不被改变太多。</p>
+<h3 id="Mod-Rate"><a href="#Mod-Rate" class="headerlink" title="Mod Rate"></a>Mod Rate</h3><p>控制早期混响合唱效果的基频，以赫兹 Hz 为单位。因为在合唱效果里有很多随机化的东西，所以这里的基频指的是平均值。0.25 到 0.5 Hz左右的数值能够带来温暖的声音，1 到 2 Hz的数值能够给声音增加一点弦乐齐奏感。</p>
+<h3 id="Mod-Depth"><a href="#Mod-Depth" class="headerlink" title="Mod Depth"></a>Mod Depth</h3><p>控制早期混响合唱效果的深度。一般来说，在创建真实的小空间的时候，这个数值低一点比较合适；而在创建大空间或者模仿老式混响的时候，就需要把它调大。</p>
+<h3 id="Early-Send"><a href="#Early-Send" class="headerlink" title="Early Send"></a>Early Send</h3><p>控制有多少早期混响被送到晚期混响中。在设计早期混响时，我们就旨在它和晚期混响无缝衔接，所以当发送早期信号到晚期混响里时，会带来一个相对没有色彩的回声密度。当 <code>Early Send</code> 为0，就意味着没有发送（也就是早期混响和晚期混响完全平行），而当它为 1 时，就是最大的发送量。</p>
+<h3 id="Diffusion"><a href="#Diffusion" class="headerlink" title="Diffusion"></a>Diffusion</h3><p>控制早期混响的回声密度（Echo density）。这个参数越低，早期混响的密度就越低。反之亦然。在很多算法混响中，高 <code>Diffusion</code> 值会让人声和鼓的混响中出现带有金属声的晚期混响，而 Valhalla Room 里不会有这样的情况。所以在大多数情况下，都可以把 <code>Diffusion</code> 设置为1。如果把 <code>Diffusion</code> 设置成比较低的数值，配合上较大的 <code>Early Size</code>，可以创造出奇怪的多重回声效果。</p>
+<p>以下是一些设置 Early 参数的建议：</p>
+<ul>
+<li>将 <code>Early Size</code> 设置为10 到 50 ms，<code>Early Send</code> 设置为1，以创造一个密度高的晚期混响。</li>
+<li>将 <code>Early Size</code> 设置为 150 ms 甚至更长，<code>Early Send</code> 设置为 1，以创造一个建立较慢的晚期混响的开头。这种设置可以很好的模拟厅堂和大教堂，也可以增加信号清晰度。</li>
+<li>将 <code>Early Size</code> 设置为 70 到 100 ms，早期发送设置为 0，<code>Late Size</code>（之后会讲到）设置较小的值，<code>Depth</code> 设置为 0.5，以模拟一个较小的，Attack有压缩感的空间。</li>
 </ul>
-  
-  
-  <article class="articles">
-    
-    
-    <h1 class="page-type-title">2023</h1>
-    
-    
-  
-  
-  
-  
-  
-  
-  <div class="archives-wrap">
-    <div class="archive-year-wrap">
-      <a href="/archives/2023" class="archive-year">2023</a>
-    </div>
-    <div class="archives">
-      
-      <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2023/01/19/Valhalla-Room%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%9709%EF%BC%9A%E5%A6%82%E4%BD%95%E5%88%9B%E9%80%A0%E5%87%BA%E4%B8%8D%E8%87%AA%E7%84%B6%E7%9A%84%E5%A4%A7%E5%8E%85%E6%B7%B7%E5%93%8D/" class="archive-article-date">
-  <time datetime="2023-01-19T05:02:11.000Z" itemprop="datePublished">01/19</time>
-</a>
-       
-<h2 itemprop="name">
-  <a class="archive-article-title" href="/2023/01/19/Valhalla-Room%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%9709%EF%BC%9A%E5%A6%82%E4%BD%95%E5%88%9B%E9%80%A0%E5%87%BA%E4%B8%8D%E8%87%AA%E7%84%B6%E7%9A%84%E5%A4%A7%E5%8E%85%E6%B7%B7%E5%93%8D/"
-    >Valhalla Room使用指南09：如何创造出不自然的大厅混响</a> 
-</h2>
  
-
-    </header>
-    
-    
-  </div>
-</article>
-      
-  
-  
-      <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2023/01/19/Valhalla-Room%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%9708%EF%BC%9A%E5%A6%82%E4%BD%95%E6%A8%A1%E6%8B%9F%E7%9C%9F%E5%AE%9E%E7%9A%84%E9%9F%B3%E4%B9%90%E5%8E%85%E6%B7%B7%E5%93%8D/" class="archive-article-date">
-  <time datetime="2023-01-19T05:01:59.000Z" itemprop="datePublished">01/19</time>
-</a>
-       
-<h2 itemprop="name">
-  <a class="archive-article-title" href="/2023/01/19/Valhalla-Room%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%9708%EF%BC%9A%E5%A6%82%E4%BD%95%E6%A8%A1%E6%8B%9F%E7%9C%9F%E5%AE%9E%E7%9A%84%E9%9F%B3%E4%B9%90%E5%8E%85%E6%B7%B7%E5%93%8D/"
-    >Valhalla Room使用指南08：如何模拟真实的音乐厅混响</a> 
-</h2>
- 
-
-    </header>
-    
-    
-  </div>
-</article>
-      
-  
-  
-      <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2023/01/19/Valhalla-Room%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%9707%EF%BC%9A%E5%A6%82%E4%BD%95%E6%A8%A1%E6%8B%9F%E6%95%99%E5%A0%82%E6%B7%B7%E5%93%8D/" class="archive-article-date">
-  <time datetime="2023-01-19T05:01:47.000Z" itemprop="datePublished">01/19</time>
-</a>
-       
-<h2 itemprop="name">
-  <a class="archive-article-title" href="/2023/01/19/Valhalla-Room%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%9707%EF%BC%9A%E5%A6%82%E4%BD%95%E6%A8%A1%E6%8B%9F%E6%95%99%E5%A0%82%E6%B7%B7%E5%93%8D/"
-    >Valhalla Room使用指南07：如何模拟教堂混响</a> 
-</h2>
- 
-
-    </header>
-    
-    
-  </div>
-</article>
-      
-  
-  
-      <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2023/01/19/Valhalla-Room%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%9706%EF%BC%9A%E6%99%9A%E6%9C%9F%E5%8F%8D%E5%B0%84%E7%9A%84%E6%8E%A7%E5%88%B6%E5%8F%82%E6%95%B0/" class="archive-article-date">
-  <time datetime="2023-01-19T05:01:36.000Z" itemprop="datePublished">01/19</time>
-</a>
-       
-<h2 itemprop="name">
-  <a class="archive-article-title" href="/2023/01/19/Valhalla-Room%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%9706%EF%BC%9A%E6%99%9A%E6%9C%9F%E5%8F%8D%E5%B0%84%E7%9A%84%E6%8E%A7%E5%88%B6%E5%8F%82%E6%95%B0/"
-    >Valhalla Room使用指南06：晚期反射的控制参数</a> 
-</h2>
- 
-
-    </header>
-    
-    
-  </div>
-</article>
-      
-  
-  
-      <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2023/01/19/Valhalla-Room%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%9705%EF%BC%9A%E6%97%A9%E6%9C%9F%E5%8F%8D%E5%B0%84-vs-%E6%97%A9%E6%9C%9F%E8%83%BD%E9%87%8F/" class="archive-article-date">
-  <time datetime="2023-01-19T05:01:20.000Z" itemprop="datePublished">01/19</time>
-</a>
-       
-<h2 itemprop="name">
-  <a class="archive-article-title" href="/2023/01/19/Valhalla-Room%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%9705%EF%BC%9A%E6%97%A9%E6%9C%9F%E5%8F%8D%E5%B0%84-vs-%E6%97%A9%E6%9C%9F%E8%83%BD%E9%87%8F/"
-    >Valhalla Room使用指南05：早期反射 vs 早期能量</a> 
-</h2>
- 
-
-    </header>
-    
-    
-  </div>
-</article>
-      
-  
-  
-      <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2023/01/19/Valhalla-Room%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%9704%EF%BC%9A%E6%97%A9%E6%9C%9F%E6%B7%B7%E5%93%8D%E7%9A%84%E6%8E%A7%E5%88%B6%E5%8F%82%E6%95%B0/" class="archive-article-date">
-  <time datetime="2023-01-19T05:00:32.000Z" itemprop="datePublished">01/19</time>
-</a>
-       
-<h2 itemprop="name">
-  <a class="archive-article-title" href="/2023/01/19/Valhalla-Room%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%9704%EF%BC%9A%E6%97%A9%E6%9C%9F%E6%B7%B7%E5%93%8D%E7%9A%84%E6%8E%A7%E5%88%B6%E5%8F%82%E6%95%B0/"
-    >Valhalla Room使用指南04：早期混响的控制参数</a> 
-</h2>
- 
-
-    </header>
-    
-    
-  </div>
-</article>
-      
-  
-  
-      <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2023/01/19/Valhalla-Room%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%9703%EF%BC%9A%E6%B7%B7%E5%93%8D%E6%A8%A1%E5%BC%8F/" class="archive-article-date">
-  <time datetime="2023-01-19T04:59:27.000Z" itemprop="datePublished">01/19</time>
-</a>
-       
-<h2 itemprop="name">
-  <a class="archive-article-title" href="/2023/01/19/Valhalla-Room%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%9703%EF%BC%9A%E6%B7%B7%E5%93%8D%E6%A8%A1%E5%BC%8F/"
-    >Valhalla Room使用指南03：混响模式</a> 
-</h2>
- 
-
-    </header>
-    
-    
-  </div>
-</article>
-      
-  
-  
-      <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2023/01/19/Valhalla-Room%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%9702%EF%BC%9A%E6%BB%91%E5%9D%97/" class="archive-article-date">
-  <time datetime="2023-01-19T04:59:10.000Z" itemprop="datePublished">01/19</time>
-</a>
-       
-<h2 itemprop="name">
-  <a class="archive-article-title" href="/2023/01/19/Valhalla-Room%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%9702%EF%BC%9A%E6%BB%91%E5%9D%97/"
-    >Valhalla Room使用指南02：滑块</a> 
-</h2>
- 
-
-    </header>
-    
-    
-  </div>
-</article>
-      
-  
-  
-      <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2023/01/19/Valhalla-Room%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%9701%EF%BC%9A%E6%A6%82%E8%A7%88/" class="archive-article-date">
-  <time datetime="2023-01-19T04:58:39.000Z" itemprop="datePublished">01/19</time>
-</a>
-       
-<h2 itemprop="name">
-  <a class="archive-article-title" href="/2023/01/19/Valhalla-Room%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%9701%EF%BC%9A%E6%A6%82%E8%A7%88/"
-    >Valhalla Room使用指南01：概览</a> 
-</h2>
- 
-
-    </header>
-    
-    
-  </div>
-</article>
-      
-  
-  
-      <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2023/01/15/%E4%BD%9C%E5%93%81%E9%9B%86/" class="archive-article-date">
-  <time datetime="2023-01-14T18:18:38.408Z" itemprop="datePublished">01/15</time>
-</a>
-       
-<h2 itemprop="name">
-  <a class="archive-article-title" href="/2023/01/15/%E4%BD%9C%E5%93%81%E9%9B%86/"
-    >Alistarの作品集</a> 
-</h2>
- 
-
-    </header>
-    
-    
-  </div>
-</article>
-      
+      <!-- reward -->
       
     </div>
-  </div>
-  
-  
+    
 
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+<div class="share-btn">
+      <span class="share-sns share-outer">
+        <i class="ri-share-forward-line"></i>
+        分享
+      </span>
+      <div class="share-wrap">
+        <i class="arrow"></i>
+        <div class="share-icons">
+          
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="ri-weibo-fill"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="ri-wechat-fill"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="ri-qq-fill"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="ri-douban-line"></i>
+          </a>
+          <!-- <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a> -->
+          
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="ri-facebook-circle-fill"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="ri-twitter-fill"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="ri-google-fill"></i>
+          </a>
+        </div>
+      </div>
+</div>
+
+<div class="wx-share-modal">
+    <a class="modal-close" href="javascript:;"><i class="ri-close-circle-line"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://alistarofficial.github.io/2023/01/19/Valhalla-Room%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%9704%EF%BC%9A%E6%97%A9%E6%9C%9F%E6%B7%B7%E5%93%8D%E7%9A%84%E6%8E%A7%E5%88%B6%E5%8F%82%E6%95%B0/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div id="share-mask"></div>  
+    </footer>
+  </div>
+
+   
+  <nav class="article-nav">
+    
+      <a href="/2023/01/19/Valhalla-Room%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%9705%EF%BC%9A%E6%97%A9%E6%9C%9F%E5%8F%8D%E5%B0%84-vs-%E6%97%A9%E6%9C%9F%E8%83%BD%E9%87%8F/" class="article-nav-link">
+        <strong class="article-nav-caption">上一篇</strong>
+        <div class="article-nav-title">
+          
+            Valhalla Room使用指南05：早期反射 vs 早期能量
+          
+        </div>
+      </a>
+    
+    
+      <a href="/2023/01/19/Valhalla-Room%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%9703%EF%BC%9A%E6%B7%B7%E5%93%8D%E6%A8%A1%E5%BC%8F/" class="article-nav-link">
+        <strong class="article-nav-caption">下一篇</strong>
+        <div class="article-nav-title">Valhalla Room使用指南03：混响模式</div>
+      </a>
+    
+  </nav>
+
+   
+<!-- valine评论 -->
+<div id="vcomments-box">
+  <div id="vcomments"></div>
+</div>
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src="https://cdn.staticfile.org/valine/1.4.16/Valine.min.js"></script>
+<script>
+  new Valine({
+    el: "#vcomments",
+    app_id: "SvZlfCeaemOPBcxam4JDZHiF-gzGzoHsz",
+    app_key: "7qpfVZYJgXhCttVB2NNKebFv",
+    path: window.location.pathname,
+    avatar: "robohash",
+    placeholder: "给我的文章加点评论吧~",
+    recordIP: true,
+  });
+  const infoEle = document.querySelector("#vcomments .info");
+  if (infoEle && infoEle.childNodes && infoEle.childNodes.length > 0) {
+    infoEle.childNodes.forEach(function (item) {
+      item.parentNode.removeChild(item);
+    });
+  }
+</script>
+<style>
+  #vcomments-box {
+    padding: 5px 30px;
+  }
+
+  @media screen and (max-width: 800px) {
+    #vcomments-box {
+      padding: 5px 0px;
+    }
+  }
+
+  #vcomments-box #vcomments {
+    background-color: #fff;
+  }
+
+  .v .vlist .vcard .vh {
+    padding-right: 20px;
+  }
+
+  .v .vlist .vcard {
+    padding-left: 10px;
+  }
+</style>
+
+ 
+   
   
+    
+</article>
+
 </section>
       <footer class="footer">
   <div class="outer">
@@ -454,6 +415,22 @@ var _hmt = _hmt || [];
 <script src="/js/lazyload.min.js"></script>
 
 <!-- Tocbot -->
+ 
+<script src="/js/tocbot.min.js"></script>
+
+<script>
+  tocbot.init({
+    tocSelector: ".tocbot",
+    contentSelector: ".article-entry",
+    headingSelector: "h1, h2, h3, h4, h5, h6",
+    hasInnerContainers: true,
+    scrollSmooth: true,
+    scrollContainer: "main",
+    positionFixedSelector: ".tocbot",
+    positionFixedClass: "is-position-fixed",
+    fixedSidebarOffset: "auto",
+  });
+</script>
 
 <script src="https://cdn.staticfile.org/jquery-modal/0.9.2/jquery.modal.min.js"></script>
 <link
