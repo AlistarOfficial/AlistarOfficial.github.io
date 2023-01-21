@@ -17,7 +17,7 @@
         name="viewport"
         content="width=device-width, initial-scale=1, maximum-scale=1"
       />
-      <title>Valhalla Room使用指南09：如何创造出不自然的大厅混响 |  啊嘞</title>
+      <title>什么是环绕声？5.1，7.1，杜比全景声全解 |  啊嘞</title>
   <meta name="generator" content="hexo-theme-ayer">
       
       <link rel="shortcut icon" href="/favicon.ico" />
@@ -79,7 +79,7 @@ var _hmt = _hmt || [];
     <main class="content on">
       <section class="outer">
   <article
-  id="post-Valhalla-Room使用指南09：如何创造出不自然的大厅混响"
+  id="post-什么是环绕声？5-1，7-1，杜比全景声全解"
   class="article article-type-post"
   itemscope
   itemprop="blogPost"
@@ -90,7 +90,7 @@ var _hmt = _hmt || [];
     <header class="article-header">
        
 <h1 class="article-title sea-center" style="border-left:0" itemprop="name">
-  Valhalla Room使用指南09：如何创造出不自然的大厅混响
+  什么是环绕声？5.1，7.1，杜比全景声全解
 </h1>
  
 
@@ -98,11 +98,11 @@ var _hmt = _hmt || [];
     </header>
      
     <div class="article-meta">
-      <a href="/2023/01/19/Valhalla-Room%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%9709%EF%BC%9A%E5%A6%82%E4%BD%95%E5%88%9B%E9%80%A0%E5%87%BA%E4%B8%8D%E8%87%AA%E7%84%B6%E7%9A%84%E5%A4%A7%E5%8E%85%E6%B7%B7%E5%93%8D/" class="article-date">
-  <time datetime="2023-01-19T05:02:11.000Z" itemprop="datePublished">2023-01-19</time>
+      <a href="/2023/01/22/%E4%BB%80%E4%B9%88%E6%98%AF%E7%8E%AF%E7%BB%95%E5%A3%B0%EF%BC%9F5-1%EF%BC%8C7-1%EF%BC%8C%E6%9D%9C%E6%AF%94%E5%85%A8%E6%99%AF%E5%A3%B0%E5%85%A8%E8%A7%A3/" class="article-date">
+  <time datetime="2023-01-21T16:40:05.000Z" itemprop="datePublished">2023-01-22</time>
 </a> 
   <div class="article-category">
-    <a class="article-category-link" href="/categories/%E6%8F%92%E4%BB%B6%E8%AF%B4%E6%98%8E%E6%96%87%E6%A1%A3/">插件说明文档</a>
+    <a class="article-category-link" href="/categories/%E6%B7%B7%E9%9F%B3%E7%9F%A5%E8%AF%86/">混音知识</a>
   </div>
   
 <div class="word_count">
@@ -110,7 +110,7 @@ var _hmt = _hmt || [];
         <span class="post-meta-item-icon">
             <i class="ri-quill-pen-line"></i>
             <span class="post-meta-item-text"> 字数统计:</span>
-            <span class="post-count">864</span>
+            <span class="post-count">1.8k</span>
         </span>
     </span>
 
@@ -119,7 +119,7 @@ var _hmt = _hmt || [];
         <span class="post-meta-item-icon">
             <i class="ri-book-open-line"></i>
             <span class="post-meta-item-text"> 阅读时长≈</span>
-            <span class="post-count">3 分钟</span>
+            <span class="post-count">6 分钟</span>
         </span>
     </span>
 </div>
@@ -135,30 +135,42 @@ var _hmt = _hmt || [];
     <div class="article-entry" itemprop="articleBody">
        
   <blockquote>
-<p>本文是 Valhalla Room 插件使用指南的第九篇也是最后一篇，介绍了怎么调出不自然的混响，也就是经典数字混响中的 Hall 预置的声音。</p>
+<p>在我们看电影和电视的时候，视觉和听觉感受同样重要，声音带来的体验是荧幕所不能提供的。而在听音乐时，声音更是主角。随着技术的进步，我们的听音体验也随之进化。现在，杜比全景声似乎是最新潮的玩意儿，那么它和环绕声的关系是怎么样的呢？它们之间的区别在哪里？请看文章。</p>
 </blockquote>
+<p><img src="https://cdn.staticaly.com/gh/AlistarOfficial/Image-saving@master/dolbyatmos-logo-dark-bkg-e_1600x.gp1gu1txsbc.jpg"></p>
 <span id="more"></span>
-<p><em>翻译：Alistar</em></p>
-<h3 id="不“厅堂”的厅堂声"><a href="#不“厅堂”的厅堂声" class="headerlink" title="不“厅堂”的厅堂声"></a>不“厅堂”的厅堂声</h3><p>在前一篇文章里，我们讨论了现实世界里厅堂混响的声音特点以及模拟这些特点的方法。<br>总的来说：</p>
-<ul>
-<li>真实的厅堂混响建立得较快。</li>
-<li>混响时间在 1.6 到 2.1 s 之间。</li>
-<li>低频的混响时间要比中频的混响时间长。</li>
-<li>此外，还会使用一点调制，以创造出没有音高变化的高模态密度的感觉。</li>
-</ul>
-<p>如果我们想要的是真实的音乐厅的感觉，那么这些设置是很好的。但如果我们想要的是不真实的大厅混响呢？最早的商业混响，<code>EMT250</code> 和 <code>Lexicon224</code>，都是为了模仿音乐厅的感觉而产生的。但因为可以用于延迟线（Delay lines）的内存有限，所以两台混响都转而研制出了较大的混响时间可调节范围来避免可能出现的金属声。它们的声音听起来大而淡，混响声中调制效果很明显，混响时间可以达到 70 s 甚至更久。没有一个“真实”的音乐厅听起来是这样的，但它们确实很好听。</p>
-<p>另外，像 <code>224</code>，<code>224XL</code> 和 <code>480L</code> 这样的硬件设备有能力人为地拉长混响的建立时间，所以这样的混响声会比真实的大厅更有“淡入”感。这并不符合现实的情况，但可以很好地分离输入信号和混响。</p>
-<h3 id="怎么用-Valhalla-Room-调制出不自然的厅堂混响"><a href="#怎么用-Valhalla-Room-调制出不自然的厅堂混响" class="headerlink" title="怎么用 Valhalla Room 调制出不自然的厅堂混响"></a>怎么用 Valhalla Room 调制出不自然的厅堂混响</h3><p>幸运的是，Valhalla Room 除了可以模仿“真实空间”，还很擅长创造出不真实的大厅的声音。</p>
-<p>以下是一些调节不自然的复古数字混响声的技巧：</p>
-<ul>
-<li>混响时间（Decay）可以任意调节，只要给你的感觉是对的。大多数经典数字混响的 Concert Hall 预置中，混响时间都在 6 s 以上。</li>
-<li>使用 <code>Late Bass Mult</code> 来调节所需要的混响的清晰度。把这个值调节到 1.0 X 以下会在混响衰减的过程中听到更多的高频声，这可能会听起来不错。</li>
-<li>调高调制深度！<code>Early Mod Depth</code> 和 <code>Late Mod Depth</code> 都可以调高，以得到那种有“晕船感”的混响。如果想要混响声变调不那么明显，可以把 <code>Mod Depth</code> 设置得低些，但同时要保持较高的调制频率。</li>
-<li>Bright Room 模式有比其他模式更深更随机的调制声。</li>
-<li>把 <code>Early Send</code> 设置为 100%，<code>Early Size</code> 要大于 100 ms，<code>Depth</code> 设置为100%。早期 Lexicon 混响里的深度选项以及后来 Lexicon 中的 <code>Shape/Spread</code> 选项，可以让用户调出一个建立得较慢的混响。通过把早期混响发到晚期混响里处理，并且设置一个较大的 <code>Early Size</code> 值，我们可以创造一个淡入的混响，而这个淡入的速率由 <code>Early Size</code> 决定。</li>
-<li><code>Early Diffusion</code> 参数可以设置得偏低，来模拟许多早期混响器在早期建立阶段的颗粒感。</li>
-<li>把 <code>High Cut</code> 设置在 5000 Hz 到 8000 Hz 之间，以模拟早期低采样率混响的黯淡的声音。</li>
-</ul>
+
+<p>作者：Alistar</p>
+<h1 id="基础：立体声"><a href="#基础：立体声" class="headerlink" title="基础：立体声"></a>基础：立体声</h1><p>立体声当然不是环绕声，但我们可以从这个概念开始说起。就像所有哺乳动物一样，人类有两只耳朵，位于头部两侧。耳朵让我们能够听到来自不同方向的声音，但我们听到的声音还并不仅仅是简单地来自左边或者右边。每个耳膜都能捕捉到相当宽的频率范围的声音，而耳朵的形状进一步细化了这些信号从不同方向传来时，人脑的不同处理方式。我们的大脑接收这些不同的频率信息，捕捉左右耳之间的微小延迟，所以我们能识别声源的方向。简单地说，<strong>我们的耳朵本质上是一对麦克风</strong>，但它有强大的滤波器和处理器来加强它的性能。</p>
+<img src="https://cdn.staticaly.com/gh/AlistarOfficial/Image-saving@master/neumann.6urjchck5280.jpg" style="zoom: 33%;" />
+
+
+
+<p>同理，就像耳朵一样，立体声系统不只是简单地从两个方向呈现声音。当左右声道不同频率的信号在空间中混合的时候，<strong>信号会产生方向性</strong>。由于立体声系统只用两个声源，所以它不能产生那种像是从所有方向发声的那种声音。但是，在环绕声系统中，多通道的信号在空间中混合的概念依然是使用的。</p>
+<h1 id="常规的环绕声：5-1-和-7-1"><a href="#常规的环绕声：5-1-和-7-1" class="headerlink" title="常规的环绕声：5.1 和 7.1"></a>常规的环绕声：5.1 和 7.1</h1><p>最早也是最成熟的环绕声技术是基于<strong>通道</strong>（Channel）的。环绕声系统一般说的是 <code>5.1</code> 或者 <code>7.1</code> 配置。对应这两种配置，电视节目，电影和音乐通常被混合成 6 个或者 8 个通道：<u>5.1 音频的左、中、右、左环绕、右环绕和低音炮，7.1音频的左、中、右、侧左、侧右、后左、后右和低音炮。</u></p>
+<img src="https://cdn.staticaly.com/gh/AlistarOfficial/Image-saving@master/5.1系统.2yknzo074yy0.jpg" style="zoom:50%;" />
+
+
+
+<p>对于支持这种环绕声的媒体格式来说，X. X 的第一个数字代表它<strong>编码了多少个有方向性的声源</strong>（每一个声源都能由扬声器单独播放），第二个数字是指<strong>低音炮通道</strong>，这个通道处理超低频信息，它产生的振动既能够被听到，也能被感受到。因为超低频信号波长很长，且更多的是身体去感受到这些频率，所以它们几乎没有方向性信息，（这也是你只需要一个低音炮的原因）。</p>
+<p>5.1 和 7.1 声道通常由主扬声器，卫星扬声器和一个单独的低音炮组成。主扬声器通常是你可以放在屏幕前的这部分扬声器，包含了左、右和中央通道。这三个通道是混音中最重要的通道，因为大部分的音频和对话都会在这三个通道里处理。</p>
+<p>卫星扬声器使得声音能从侧面和后方传来，实现了环绕声中的“环绕”部分。在 5.1 声道系统中，卫星扬声器布置在听众左右两边稍微靠后的位置。7.1 声道中系统中有两对卫星扬声器，分别覆盖左右两侧和左后、右后方。</p>
+<p>在空间音频（Spatial Audio）技术出现之前，大多数电影电视节目的环绕声都是混合 6 个或者 8 个独立的音频通道，以适配典型的环绕声系统中的扬声器数量。这些多通道可以向下混合成较少的通道，用于立体声扬声器、3.1 声道系统和其他形式的音响系统。市面上两个最大，也是最规范的环绕声格式，一个是 Dolby 的 Digital 5.1 或 7.1，一个是 DTS 5.1 或7.1。</p>
+<h1 id="高度通道：5-1-2，9-2-4-等"><a href="#高度通道：5-1-2，9-2-4-等" class="headerlink" title="高度通道：5.1.2，9.2.4 等"></a>高度通道：5.1.2，9.2.4 等</h1><p>在 21 世纪初，出现了高度通道这个概念，这让环绕声的命名变得更加复杂。于是，环绕声系统的第三个数字就代表了<strong>位于扬声器上方的声源</strong>。高度通道通过单独的卫星扬声器或者用对着天花板的扬声器，把声音从天花板反弹下来或者从天花板处发声，这样就把环绕声构成的一个圆圈变成了一个圆顶，创造出了更加身临其境的体验。</p>
+<img src="https://cdn.staticaly.com/gh/AlistarOfficial/Image-saving@master/5.1.2系统.12r1ymmqtdeo.jpg" style="zoom: 33%;" />
+
+
+
+<p>然而，作为一种环绕声格式，它只是通往空间音频的过渡点。不久后，空间音频技术将取而代之。</p>
+<hr>
+<h1 id="空间音频：Dolyb-Atmos-和-DTS-X"><a href="#空间音频：Dolyb-Atmos-和-DTS-X" class="headerlink" title="空间音频：Dolyb Atmos 和 DTS:X"></a>空间音频：Dolyb Atmos 和 DTS:X</h1><img src="https://cdn.staticaly.com/gh/AlistarOfficial/Image-saving@master/Atmos-vs-DTS-X.5sz5ppk5mpc0.jpg" style="zoom:50%;" />
+
+
+
+<p><code>Dolby</code> 和 <code>DTS</code> 研究的空间音频处理技术是环绕声空间方面最新（也是使用效率最高）的进展之一。空间音频技术把媒体中的每个声源都单独映射到<strong>一个 360° 的球体中的某个位置上</strong>，包括高度信息。应用这项技术之后，电影或者音乐里的声音就不再是少数几个通道的声音混合起来，通过单独的单元组传给听众，而是可以在听众周围放上成千上万个声效。在空间音频中，每个声源都被映射到一个单独的位置上，所以空间音频有时候也被称为<strong>“基于对象”</strong>的音频。</p>
+<p>当然，虽然说我们可以在 360° 的“球体”上放任意多的声音，但是我们的音频系统中不太可能有成千上万个卫星扬声器来作为声源的载体，所以，空间音频就被设计出了适配任何形式的音频系统的能力。任何支持空间音频格式的硬件都可以正确混合所有声源，以适应扬声器单元的数量。而更多的扬声器数量意味着更多的映射选项，<strong>所以为了获得最好的效果，至少需要一个 5.1 系统。</strong></p>
+<p>应用最广泛的空间音频格式是 Dolby Atmos，DTS:X 紧随其后。Apple TV，Netflix 和 Disney+ 在它们大部分的新内容上都用上了 Dolby Atmos（杜比全景声）。而 DTS:X 则是出现在蓝光和超清蓝光片上更多。</p>
+<h1 id="打个总结"><a href="#打个总结" class="headerlink" title="打个总结"></a>打个总结</h1><p>现在我们可以知道，Dolby Atmos 可以算作是环绕声的一种格式，但它又和传统的环绕声有所不同，一个基于通道，一个基于对象，使用的技术不尽相同。<strong>那么作为听众，我们需要用什么设备去欣赏空间音频的音乐，在哪里可以找到空间音频格式的资源；作为混音师，我们要用到什么工具来混空间音频作品。</strong>这些话题我们就在之后的文章里讨论喽，欢迎关注！</p>
  
       <!-- reward -->
       
@@ -211,30 +223,23 @@ var _hmt = _hmt || [];
     <a class="modal-close" href="javascript:;"><i class="ri-close-circle-line"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://alistarofficial.github.io/2023/01/19/Valhalla-Room%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%9709%EF%BC%9A%E5%A6%82%E4%BD%95%E5%88%9B%E9%80%A0%E5%87%BA%E4%B8%8D%E8%87%AA%E7%84%B6%E7%9A%84%E5%A4%A7%E5%8E%85%E6%B7%B7%E5%93%8D/" alt="微信分享二维码">
+      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://alistarofficial.github.io/2023/01/22/%E4%BB%80%E4%B9%88%E6%98%AF%E7%8E%AF%E7%BB%95%E5%A3%B0%EF%BC%9F5-1%EF%BC%8C7-1%EF%BC%8C%E6%9D%9C%E6%AF%94%E5%85%A8%E6%99%AF%E5%A3%B0%E5%85%A8%E8%A7%A3/" alt="微信分享二维码">
     </div>
 </div>
 
 <div id="share-mask"></div>  
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/dolbyatmos/" rel="tag">dolbyatmos</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%85%A8%E6%99%AF%E5%A3%B0/" rel="tag">全景声</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E7%8E%AF%E7%BB%95%E5%A3%B0/" rel="tag">环绕声</a></li></ul>
+
     </footer>
   </div>
 
    
   <nav class="article-nav">
     
-      <a href="/2023/01/22/%E4%BB%80%E4%B9%88%E6%98%AF%E7%8E%AF%E7%BB%95%E5%A3%B0%EF%BC%9F5-1%EF%BC%8C7-1%EF%BC%8C%E6%9D%9C%E6%AF%94%E5%85%A8%E6%99%AF%E5%A3%B0%E5%85%A8%E8%A7%A3/" class="article-nav-link">
-        <strong class="article-nav-caption">上一篇</strong>
-        <div class="article-nav-title">
-          
-            什么是环绕声？5.1，7.1，杜比全景声全解
-          
-        </div>
-      </a>
     
-    
-      <a href="/2023/01/19/Valhalla-Room%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%9708%EF%BC%9A%E5%A6%82%E4%BD%95%E6%A8%A1%E6%8B%9F%E7%9C%9F%E5%AE%9E%E7%9A%84%E9%9F%B3%E4%B9%90%E5%8E%85%E6%B7%B7%E5%93%8D/" class="article-nav-link">
+      <a href="/2023/01/19/Valhalla-Room%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%9709%EF%BC%9A%E5%A6%82%E4%BD%95%E5%88%9B%E9%80%A0%E5%87%BA%E4%B8%8D%E8%87%AA%E7%84%B6%E7%9A%84%E5%A4%A7%E5%8E%85%E6%B7%B7%E5%93%8D/" class="article-nav-link">
         <strong class="article-nav-caption">下一篇</strong>
-        <div class="article-nav-title">Valhalla Room使用指南08：如何模拟真实的音乐厅混响</div>
+        <div class="article-nav-title">Valhalla Room使用指南09：如何创造出不自然的大厅混响</div>
       </a>
     
   </nav>

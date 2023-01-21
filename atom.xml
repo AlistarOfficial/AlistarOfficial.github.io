@@ -6,7 +6,7 @@
   <link href="https://alistarofficial.github.io/atom.xml" rel="self"/>
   
   <link href="https://alistarofficial.github.io/"/>
-  <updated>2023-01-19T05:29:01.890Z</updated>
+  <updated>2023-01-21T16:52:07.137Z</updated>
   <id>https://alistarofficial.github.io/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>什么是环绕声？5.1，7.1，杜比全景声全解</title>
+    <link href="https://alistarofficial.github.io/2023/01/22/%E4%BB%80%E4%B9%88%E6%98%AF%E7%8E%AF%E7%BB%95%E5%A3%B0%EF%BC%9F5-1%EF%BC%8C7-1%EF%BC%8C%E6%9D%9C%E6%AF%94%E5%85%A8%E6%99%AF%E5%A3%B0%E5%85%A8%E8%A7%A3/"/>
+    <id>https://alistarofficial.github.io/2023/01/22/%E4%BB%80%E4%B9%88%E6%98%AF%E7%8E%AF%E7%BB%95%E5%A3%B0%EF%BC%9F5-1%EF%BC%8C7-1%EF%BC%8C%E6%9D%9C%E6%AF%94%E5%85%A8%E6%99%AF%E5%A3%B0%E5%85%A8%E8%A7%A3/</id>
+    <published>2023-01-21T16:40:05.000Z</published>
+    <updated>2023-01-21T16:52:07.137Z</updated>
+    
+    
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;在我们看电影和电视的时候，视觉和听觉感受同样重要，声音带来的体验是荧幕所不能提供的。而在听音乐时，声音更是主角。随着技术的进步，我们的听音体验也随之进化。现在，杜比全景声似乎是最新潮的玩意儿，那么它和环绕声的关系是怎么样的呢？它们之间的区别在哪里？请看文章。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;img src=&quot;https://cdn.staticaly.com/gh/AlistarOfficial/Image-saving@master/dolbyatmos-logo-dark-bkg-e_1600x.gp1gu1txsbc.jpg&quot;&gt;&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="混音知识" scheme="https://alistarofficial.github.io/categories/%E6%B7%B7%E9%9F%B3%E7%9F%A5%E8%AF%86/"/>
+    
+    
+    <category term="全景声" scheme="https://alistarofficial.github.io/tags/%E5%85%A8%E6%99%AF%E5%A3%B0/"/>
+    
+    <category term="环绕声" scheme="https://alistarofficial.github.io/tags/%E7%8E%AF%E7%BB%95%E5%A3%B0/"/>
+    
+    <category term="dolbyatmos" scheme="https://alistarofficial.github.io/tags/dolbyatmos/"/>
+    
+  </entry>
   
   <entry>
     <title>Valhalla Room使用指南09：如何创造出不自然的大厅混响</title>
