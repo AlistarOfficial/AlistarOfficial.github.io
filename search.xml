@@ -20,6 +20,86 @@
 ]]></content>
   </entry>
   <entry>
+    <title>杜比全景声后期制作官方教程 1.1 超越多声道音频</title>
+    <url>/2023/02/11/%E6%9D%9C%E6%AF%94%E5%85%A8%E6%99%AF%E5%A3%B0%E5%90%8E%E6%9C%9F%E5%88%B6%E4%BD%9C%E5%AE%98%E6%96%B9%E6%95%99%E7%A8%8B-1-1-%E8%B6%85%E8%B6%8A%E5%A4%9A%E5%A3%B0%E9%81%93%E9%9F%B3%E9%A2%91/</url>
+    <content><![CDATA[<blockquote>
+<p>Dolby Atmos 是一种环绕声音频格式，无论是在影院，家里还是移动设备上，都能带给听众身临其境的体验。本课程旨在让你熟悉使用 DAW 来进行 Dolby Atmos 内容创作的工作流，熟悉 Dolby Atmos Renderer（渲染器）以及其他组件。<br>在深入了解 Dolby Atmos 工作流之前，我们先来了解一下 Dolby Atmos 的概念，搞清楚 Dolby Atmos 的内容是怎么交付给消费者端的。</p>
+</blockquote>
+<hr>
+<span id="more"></span>
+
+<p><em>翻译：Alistar</em></p>
+<p><em>出处：Dolby Atmos Post-Production Course</em></p>
+<h1 id="音床：Audio-Bed"><a href="#音床：Audio-Bed" class="headerlink" title="音床：Audio Bed"></a>音床：Audio Bed</h1><p>在传统的多声道音频中，声道就对应着具体的扬声器位置。比如说，如果混音师想要一个声音从左环绕扬声器发出来，他们就会把声音输出到左环绕扬声器对应的 Bus，或者 pan 到左环绕声道。如果他想要声音像是在左侧扬声器和左环绕扬声器之间，那么就需要把声音 pan 到这两个声道之间，来创造出幻象声像（就像立体声扬声器的幻象中心）。Dolby Atmos 也应用了传统的多声道系统，将这些声道统称为<strong>音床</strong>。音床的配置范围下至立体声，上至 7.1.2 配置。</p>
+<h1 id="声音对象和对象元数据：Object-Audio-and-Object-Metadata"><a href="#声音对象和对象元数据：Object-Audio-and-Object-Metadata" class="headerlink" title="声音对象和对象元数据：Object Audio and Object Metadata"></a>声音对象和对象元数据：Object Audio and Object Metadata</h1><p>除了音床之外，Dolby Atmos 还引入了<strong>声音对象</strong>的概念。声音对象并不是直接 bus 或者 pan 到声道，而是会以 X，Y，Z 坐标的形式记录下声像信息。而这些 X，Y，Z 轴坐标以及声音对象的大小信息，会和声音一起，记录为<strong>声音对象元数据</strong>（Object Audio Metadata，OAMD）。OAMD 是动态的，当 Dolby Atmos Renderer 和 DAW 同步时，它会实时更新每一次的声像移动。</p>
+<p>声音对象和对象元数据是和音床分开维护的。在终端用户的设备上，OAMD 用于将对象渲染到正确的位置上，适应各种配置的扬声器系统。这就让我们能够在各种扬声器配置下去对应处理每个扬声器，提高了声像信息的准确度。这一点是基于离散的多声道的系统所不能做到的。</p>
+<p>混合并记录音床和声音对象（及其 OAMD）信息就是 Dolby Atmos 内容的创建方式。</p>
+<p>Dolby Atmos Renderer 能够捕获多达 128 个音频轨道。前 10 个轨道专门用于捕获音床信号，最大可支持 7.1.2，剩下的 118 个输入可以用于声音对象或者附加的音床。附加的音床轨可以让多个 DAW 系统在不同的 Stems 上工作变得更简单，也可以用来简化生成基于多声道系统 Stems 的工作流。增加音床数量会减少声音对象可用的轨道数。之后会有更多这方面的内容。</p>
+<h1 id="声音对象渲染器：Object-Audio-Renderer"><a href="#声音对象渲染器：Object-Audio-Renderer" class="headerlink" title="声音对象渲染器：Object Audio Renderer"></a>声音对象渲染器：Object Audio Renderer</h1><p>在 Dolby Atmos 环境下混音，建议的扬声器配置是 <code>7.1.4</code>。</p>
+<p>然而，实际的终端设备并不都是这个配置。我们的混音是通过音床和带有 OAMD 的声音对象所产生的，Dolby Atmos Renderer 会把这些信息转译为现实中的扬声器布局，而扬声器的配置有很多种。在专业的混音中，这可能包括了从耳机上的双耳音频到 7.1.4 以上的扬声器布局。</p>
+<p>所以，Dolby Atmos 还引入了另一个渲染器：<strong>声音对象渲染器</strong>，它是 Dolby Atmos 的另一个核心概念。在使用 Dolby Atmos Renderer 混音以及播放 Dolby Atmos Master Files 时，都会用到声音对象渲染器（OAR）。OAR 将音床渲染到可用的扬声器上，并且把声音对象 渲染到 OAMD 提供的空间坐标上去。这种 OAR 渲染充分利用了可用的扬声器，能够适应各种扬声器配置，而这如前所说，是传统的环绕声系统所做不到的。</p>
+<p>对于所有音床，声音对象和 OAMD 的信息录制，以及用 OAR 再现这些内容的过程，就是 Dolby Atmos 的本质。（这些录制下来的混音有时候被称为 Printmaster 或 Master File）。</p>
+<h1 id="影院和家庭-Dolby-Atmos-之间的区别"><a href="#影院和家庭-Dolby-Atmos-之间的区别" class="headerlink" title="影院和家庭 Dolby Atmos 之间的区别"></a>影院和家庭 Dolby Atmos 之间的区别</h1><p>如前所述，Dolby Atmos Renderer 可以录制记录多达 128 个轨道，其中包括 10 个通道的音床轨和 118 个通道的带有 OAMD 信息的声音对象。在影院中，Dolby Atmos 的 Master File 是从数字影院服务器上的数字影院包中回放的。所有 128 个轨道被 Dolby Cinema Processor（杜比影院处理器）中的 OAR 充分利用，将音床和 OAMD 信息传递给 64 个独立的扬声器。这为电影院的观众创造出了一个完整的沉浸式音频的体验。</p>
+<p>但是，由于 OTT 流媒体传输的带宽限制以及蓝光文件的文件大小限制，想要把完整的 Dolby Atmos Master 文件（多达 128 轨以及包含的 OAMD 信息）传达到家庭听众端是不现实的。此外，消费设备中的 OAR 也不可能拥有呈现完整的 Atmos 所需的处理能力。</p>
+<p>为了向家庭用户提供 Dolby Atmos，我们引入了两个核心概念来减少比特率，文件大小以及复杂性，同时保留原始混音的艺术意图，提供完整的家庭沉浸式音频的体验。这两个概念分别是 <code>Spatial Coding</code>（空间编码）和使用 <code>delivery Codecs</code>（传输编解码器）。</p>
+<h1 id="空间编码：Spatial-Coding"><a href="#空间编码：Spatial-Coding" class="headerlink" title="空间编码：Spatial Coding"></a>空间编码：Spatial Coding</h1><p>空间编码能够将完整的 Dolby Atmos 呈现缩减成一个更为精简的数据集。它将 128 个轨道以及 多达 118 个声音对象中的 OAMD 信息缩减成 12，14 或者 16 个 Elements（元素）。空间编码是将 Dolby Atmos 混音传达到家庭用户端的第一步。</p>
+<p>空间编码使用了响度和位置算法，动态地将临近的音床和声音对象中的音频编为一组，成为一个 Element（有时候也叫做集群），Element 中包含着 OAMD 信息。这些 Element 本身可以随着时间推移移动，而音床和声音对象可以在元素之间移动，这样就能更准确地反映它们的位置和运动轨迹。以下是空间编码处理的示意图。</p>
+<p><img src="https://cdn.staticaly.com/gh/AlistarOfficial/Image-saving@master/%E7%A9%BA%E9%97%B4%E7%BC%96%E7%A0%81%E8%BF%87%E7%A8%8B.3lzbki1zas60.jpg"></p>
+<p>虽然说完整的 Dolby Atmos 中可能会有多达 128 轨，但很少会同一时间用到所有的轨道。即便是再复杂和混乱的混音，空间编码产生的动态 Elements 也能给 OAR 提供足够的空间分辨率，以重现一个身临其境的声场。在我们推荐的扬声器配置 7.1.4 以及常见的 9.1.6 甚至更多的家庭影院扬声器配置上，空间编码的处理过程对大多数内容都不会有过多的影响。</p>
+<h1 id="空间编码模拟：Spatial-Coding-Emulation"><a href="#空间编码模拟：Spatial-Coding-Emulation" class="headerlink" title="空间编码模拟：Spatial Coding Emulation"></a>空间编码模拟：Spatial Coding Emulation</h1><p>空间编码的过程是 Dolby Atmos 编码过程的一部分，发生在后期制作的下游阶段。虽然通常来说空间编码不会对声音有太多影响，但在有时候是会和我们预期的听觉效果不太一样（这取决于使用的 Element 数量）。</p>
+<p>因此，Dolby Atmos Renderer 提供了一个<strong>空间编码模拟</strong>的功能，允许混音师在编码过程之前就提前试听到空间编码后的声音呈现。由于我们最终给到家庭用户的 Dolby Atmos 成品是进行了空间编码处理的，所以，当我们混音到差不多满意的阶段时，就应该打开空间编码模拟来对混音做出调整，这是非常重要的。当然，我们在最初的声音设计和音频编辑的过程中是不需要打开这个功能的。</p>
+<p>我们可以模拟使用了 12，14 或者 16 个 Element 的空间编码效果。而可用的 Element 数量是会因为编解码器和比特率的不同而变化的。因此，我们需要去了解最终的交付方式，以便进行正确的监听。想要更深入地了解交付到消费者端的 Dolby Atmos 的 Dolby 编解码器，可以看附录 A 的内容。</p>
+<p><em>注：空间编码不会用到双耳音频的渲染中。</em></p>
+<h1 id="重渲染：Re-renders"><a href="#重渲染：Re-renders" class="headerlink" title="重渲染：Re-renders"></a>重渲染：Re-renders</h1><p>除了可以将信息录制到 Dolby Atmos 母带文件以及导出成其他的母带格式之外，Dolby Atmos Renderer 还可以用来输出传统的多声道内容。这些重渲染的产物是由 OAR 生成的。这种重渲染可以实时输出（分配到对应的硬件输出），也可以回录到 DAW 中或者离线导出。</p>
+<p>重渲染的范围下至立体声，上至 9.1.6 以及 Ambisonic 格式。在 Dolby Atmos 中创建的内容，最常见的输出配置是立体声，5.1，7.1 和 7.1.4（用于游戏引擎比如 <code>Wwise</code> 和 <code>Unity</code>）。重渲染内容可以包含完整的混音，也可以通过输入的分组来进行自定义重渲染内容。</p>
+<h1 id="单音床和多音床工作流"><a href="#单音床和多音床工作流" class="headerlink" title="单音床和多音床工作流"></a>单音床和多音床工作流</h1><p>Dolby Atmos Renderer 的前十个输入是专门留给音床输入的。音床的范围可以从立体声一直到7.1.2。剩下的 118 个输入可以用于声音对象和附加的音床。</p>
+<p>混音师通常会在 DAW 中将声音进行分组，形成不同的 stems。在后期制作中，通常会有对话、音乐、效果类的 stem，也可能会有 旁白，拟音等 stem。在音乐制作中，通常会有 鼓、吉他、键盘、人声等 stem。在 Dolby Atmos 工作环境下，混音师可以为每个 stem 都分配多个对应的音床。</p>
+<p><img src="https://cdn.staticaly.com/gh/AlistarOfficial/Image-saving@master/%E9%9F%B3%E5%BA%8A.47cpvyhoabc0.jpg"></p>
+<p>音床轨可以汇总 &#x2F; 组合，成为一个新的复合音床，再输出到 Renderer 的前十个输入中，省出输入位置给声音对象使用。</p>
+<p>如果混音师需要在 Dolby Atmos 混音环境下，导出基于声道的 stem，那么混音师就必须选中需要的轨道并多次导出。</p>
+<p>另一个方法就是使用多音床工作流。每个 stem 都有专用的音床轨，每个音床又都有各自独占的输出，给到 Renderer 的对应的独占的输入中去。</p>
+<p><img src="https://cdn.staticaly.com/gh/AlistarOfficial/Image-saving@master/%E5%A4%9A%E9%9F%B3%E5%BA%8A%E5%B7%A5%E4%BD%9C%E6%B5%81.6cjo2ml5mmg0.jpg"></p>
+<p>在 Renderer 中，专用一个 stem 的音床和声音对象可以分为一组，这样就可以生成基于通道的 stem，而不用在 DAW 中多次静音轨道再分别导出，能节约很多时间。但是，这样做留给声音对象的 Renderer 输入就会减少。</p>
+<p>这种方法对于多 DAW 分别处理特定的 stem 这样的工作流也很重要。每个 DAW 都会分配到特定的 Renderer 输入，留给它们需要处理的 stem 对应的音床和声音对象。</p>
+<p>使用多音床工作流和 Re-renders 是 Dolby Atmos 能够 <strong>Master Once &#x2F; Deliver Everywhere</strong>（即在 Dolby Atmos 环境下混音，通过导出非 Atmos 格式的内容来保证在各种终端上的兼容性）的部分前提。通过使用不同的 downmix 模式 和 trim，能在导出的时候具有很高的灵活度，保证在 Dolby Atmos 中做出的混音，导成基于声道的格式后，能够和在传统环绕声格式下做的多声道作品一样好，甚至更好。</p>
+<h1 id="Dolby-Atmos-中的响度计量"><a href="#Dolby-Atmos-中的响度计量" class="headerlink" title="Dolby Atmos 中的响度计量"></a>Dolby Atmos 中的响度计量</h1><p>响度计量不是在完整的 Dolby Atmos 上进行的，而是在重渲染的 5.1 上进行。这样做有两个原因。首先，目前并没有一个行之有效的方法来计量完整的 Dolby Atmos 内容的响度。其次，更重要的是，在 5.1 上来做响度计量可以确保 Dolby Atmos 内容和非 Dolby Atmos 内容之间的响度连续性。家庭观众在观看 Dolby Atmos 电影时，如果切换回 5.1 内容，不太会感知到响度有变化。</p>
+<p>Dolby Atmos Renderer 内置的实时和离线响度计量都是可用的。另外，生成的重渲染 5.1 内容的响度还可以用响度 apps 和 DAW 插件进行计量。虽然不同的交付平台和格式会有不同的响度要求，<strong>但是一般来说，- 23 LUFS、-24 LKFS 和 - 27 LKFS 是比较常见的响度目标</strong>。</p>
+<p>在 Dolby Atmos 内容中，即使在 DAW 中应用了限制器，也很难去达到指定的 True Peak（dBTP）目标值。更不用说在重渲染成 5.1 内容时不可预知的 summing 过程也会影响 True Peak。另外，True Peak 的计量性质也是插值的。</p>
+<p>虽然在 5.1 环境下工作时，通常会有具体的 True Peak 限制的交付标准，但在 Dolby Atmos 工作时，True Peak 的标准只能是一个<strong>目标值</strong>，而不是绝对值。只要 dBTP 的目标值是 - 2 dBTP 并且不超过 -. 1 dBTP，在编码过程中使用的限制器就足以防止音频削波。</p>
+<p>如果必须满足重渲染的多声道音频的真实峰值限制标准，则重渲染内容需要在 DAW 里进行<strong>额外的限制步骤</strong>。</p>
+<p>Dolby Atmos Renderer 中的响度测量工具中有内嵌的 soft clip 限制器，可以模拟编码过程。如果使用外部响度测量应用程序或插件，那么响度计量的对象就应该是应用了这个 soft clip 限制器的 5.1 重渲染内容，这样才能保证计量结果的一致性。</p>
+<p>在编码过程中也会进行响度计量，并且根据计量结果来设置 dianorm（控制重放增益的参数） 元数据值。</p>
+<h1 id="Dolby-Atmos-Mater-格式"><a href="#Dolby-Atmos-Mater-格式" class="headerlink" title="Dolby Atmos Mater 格式"></a>Dolby Atmos Mater 格式</h1><p>Dolby Atmos Renderer 最多可记录 128 个输入，其中包括了音床，声音对象，OAMD 和 双耳音频、Downmix 和 Trim 元数据、输入和重渲染配置等信息。</p>
+<p>这些信息都会记录到 <strong>Dolby Atmos Master File Set</strong>（DAMF）。这是 Dolby Atmos Renderer 的	原生格式，分别又记录为以下三个文件集：</p>
+<ul>
+<li><code>.atmos</code> - 一个 XML 文件，包含了有关 Dolby Atmos 演示的信息和其他文件的索引信息。.atmos 文件包括了音床和声音对象输入的数量、帧率、文件开始处、第一帧动作、空间编码中用到的 Element 数量、downmix 和 Trim 元数据。</li>
+<li><code>.atmos.metadata</code> - 一个 XML 文件，包含了记录每个声音对象的动态位置和大小信息的 OAMD 数据，以及双耳音频元数据设置。</li>
+<li><code>.atmos.audio</code> - 一个 CAF（核心音频格式 Core Audio Format）格式的文件，包含了多达 128 轨的交叠在一起的音频。</li>
+<li><code>.atmos</code> 和 <code>.atmos.metadata</code> 文件可以用文本编辑器打开，但是不建议直接编辑这些文件，有可能会破坏文件集。</li>
+</ul>
+<p>虽然新的 master 都会记录为 DAMF 格式，但还有两种格式用于分发、编码或者进一步的编辑。</p>
+<p><code>ADM BWF</code> - 全称为 Audio Definition Model Broadcast Wav Format，是 DAMF 的替代格式。（有时称为 ADM BWAV），.atmos 和.atmos.metadata 文件中的信息都包含在 wav 文件头的数据块中。这种格式自身的负载量最多为 128 轨的交叠音频。ADM 有几个优点：</p>
+<ul>
+<li>ADM BWF 是一个单一的文件，而不是在一个文件夹中的三个文件，这让它可以在不同设备软件间之间传输。</li>
+<li>ADM BWF 可以导入到 DAW 里，使得音床和声音对象以及对应的位置元数据可以在 DAW 里复现。也让后续的编辑工作，如语言替换、时序一致性、审查编辑等等，可以在 remaster 之前进行。</li>
+<li>ADM BWF 可以被编码为 <code>Dolby True HD</code>，<code>Dolby Digital Plus JOC</code> 和 <code>Dolby AC-4 IMS</code>，是流媒体运营商和蓝光制造商的主要交付格式。</li>
+</ul>
+<p><code>IMF.IAB</code> - Immersive Audio Bitstream 是 IMF（Interoperability Master Format） 的夹层格式。IAB 被认为是夹层格式而不是 Master 格式，因为 OAMD 是量化的。第三方 IMF 打包工具用 IMF.mxf 格式来为 Dolby Atmos 和视频（包括 Dolby Vision）内容创建交付容器。<strong>IMF.IAB 格式不用于 Dolby Atmos Music</strong>。</p>
+<p>虽然 Dolby Atmos Renderer 原生只以 .atmos 格式记录，但它可以转换和导出为 ADM BWF 和 IAB.mxf 格式。可以导出整个文件，也可以进行基本的顶部 &#x2F; 尾部（指定范围）编辑。</p>
+<p>Dolby Atmos Renderer 还可以打开 ADM BWF 和 IAB.mxf 格式的文件作为 Master 文件，用于回访，质量控制（Quality Control，QC），基本的顶部 &#x2F; 尾部编辑，在两种格式之间转换和重渲染。然而，打开 ADM BWF 和 IAB.mxf 格式的文件也有一些限制。在这两种格式下，不能执行输入数值和其他的元数据编辑操作。也不能从 ADM BWF 和 IAB.mxf 转换为 .atmos 格式的文件。</p>
+<p>Dolby Atmos 转换工具（Dolby Atmos Conversion Tool，DACT）是 Dolby Atmos Renderer 的配套应用，可以将 ADM BWF 和 IAB.mxf 转换为 .atmos 格式，执行格式和帧率的转换，以及对 Master 文件进行复杂的编辑操作。Dolby Atmos 转换工具是免费的。</p>
+<h1 id="技术交付规范"><a href="#技术交付规范" class="headerlink" title="技术交付规范"></a>技术交付规范</h1><p>流媒体服务要求的交付成品标准在技术交付规范中作了说明。规范中涉及到响度，峰值目标，master 文件的格式和数量以及多声道交付成品和命名管理，不同的流媒体服务会有不同的要求。有些规范要求用 Pro Tools Session 和 ADB BWF 来存档。了解交付规范和标准是实现高效工作流的关键。</p>
+]]></content>
+      <categories>
+        <category>混音知识</category>
+      </categories>
+      <tags>
+        <tag>译制教程</tag>
+        <tag>全景声</tag>
+        <tag>dolbyatmos</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>什么是环绕声？5.1，7.1，杜比全景声全解</title>
     <url>/2023/01/22/%E4%BB%80%E4%B9%88%E6%98%AF%E7%8E%AF%E7%BB%95%E5%A3%B0%EF%BC%9F5-1%EF%BC%8C7-1%EF%BC%8C%E6%9D%9C%E6%AF%94%E5%85%A8%E6%99%AF%E5%A3%B0%E5%85%A8%E8%A7%A3/</url>
     <content><![CDATA[<blockquote>
@@ -65,7 +145,6 @@
       </categories>
       <tags>
         <tag>全景声</tag>
-        <tag>环绕声</tag>
         <tag>dolbyatmos</tag>
       </tags>
   </entry>
@@ -101,6 +180,10 @@
       <categories>
         <category>插件说明文档</category>
       </categories>
+      <tags>
+        <tag>插件手册</tag>
+        <tag>译制教程</tag>
+      </tags>
   </entry>
   <entry>
     <title>Valhalla Room使用指南08：如何模拟真实的音乐厅混响</title>
@@ -148,6 +231,10 @@
       <categories>
         <category>插件说明文档</category>
       </categories>
+      <tags>
+        <tag>插件手册</tag>
+        <tag>译制教程</tag>
+      </tags>
   </entry>
   <entry>
     <title>Valhalla Room使用指南07：如何模拟教堂混响</title>
@@ -171,6 +258,10 @@
       <categories>
         <category>插件说明文档</category>
       </categories>
+      <tags>
+        <tag>插件手册</tag>
+        <tag>译制教程</tag>
+      </tags>
   </entry>
   <entry>
     <title>Valhalla Room使用指南06：晚期反射的控制参数</title>
@@ -208,6 +299,10 @@
       <categories>
         <category>插件说明文档</category>
       </categories>
+      <tags>
+        <tag>插件手册</tag>
+        <tag>译制教程</tag>
+      </tags>
   </entry>
   <entry>
     <title>Valhalla Room使用指南05：早期反射 vs 早期能量</title>
@@ -235,6 +330,10 @@
       <categories>
         <category>插件说明文档</category>
       </categories>
+      <tags>
+        <tag>插件手册</tag>
+        <tag>译制教程</tag>
+      </tags>
   </entry>
   <entry>
     <title>Valhalla Room使用指南04：早期混响的控制参数</title>
@@ -265,6 +364,10 @@
       <categories>
         <category>插件说明文档</category>
       </categories>
+      <tags>
+        <tag>插件手册</tag>
+        <tag>译制教程</tag>
+      </tags>
   </entry>
   <entry>
     <title>Valhalla Room使用指南03：混响模式</title>
@@ -285,6 +388,10 @@
       <categories>
         <category>插件说明文档</category>
       </categories>
+      <tags>
+        <tag>插件手册</tag>
+        <tag>译制教程</tag>
+      </tags>
   </entry>
   <entry>
     <title>Valhalla Room使用指南02：滑块</title>
@@ -307,6 +414,10 @@
       <categories>
         <category>插件说明文档</category>
       </categories>
+      <tags>
+        <tag>插件手册</tag>
+        <tag>译制教程</tag>
+      </tags>
   </entry>
   <entry>
     <title>Valhalla Room使用指南01：概览</title>
@@ -330,5 +441,9 @@
       <categories>
         <category>插件说明文档</category>
       </categories>
+      <tags>
+        <tag>插件手册</tag>
+        <tag>译制教程</tag>
+      </tags>
   </entry>
 </search>

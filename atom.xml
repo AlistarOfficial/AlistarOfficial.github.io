@@ -6,7 +6,7 @@
   <link href="https://alistarofficial.github.io/atom.xml" rel="self"/>
   
   <link href="https://alistarofficial.github.io/"/>
-  <updated>2023-01-21T16:52:07.137Z</updated>
+  <updated>2023-02-10T16:48:36.127Z</updated>
   <id>https://alistarofficial.github.io/</id>
   
   <author>
@@ -17,11 +17,37 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>杜比全景声后期制作官方教程 1.1 超越多声道音频</title>
+    <link href="https://alistarofficial.github.io/2023/02/11/%E6%9D%9C%E6%AF%94%E5%85%A8%E6%99%AF%E5%A3%B0%E5%90%8E%E6%9C%9F%E5%88%B6%E4%BD%9C%E5%AE%98%E6%96%B9%E6%95%99%E7%A8%8B-1-1-%E8%B6%85%E8%B6%8A%E5%A4%9A%E5%A3%B0%E9%81%93%E9%9F%B3%E9%A2%91/"/>
+    <id>https://alistarofficial.github.io/2023/02/11/%E6%9D%9C%E6%AF%94%E5%85%A8%E6%99%AF%E5%A3%B0%E5%90%8E%E6%9C%9F%E5%88%B6%E4%BD%9C%E5%AE%98%E6%96%B9%E6%95%99%E7%A8%8B-1-1-%E8%B6%85%E8%B6%8A%E5%A4%9A%E5%A3%B0%E9%81%93%E9%9F%B3%E9%A2%91/</id>
+    <published>2023-02-10T16:46:01.000Z</published>
+    <updated>2023-02-10T16:48:36.127Z</updated>
+    
+    
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;Dolby Atmos 是一种环绕声音频格式，无论是在影院，家里还是移动设备上，都能带给听众身临其境的体验。本课程旨在让你熟悉使用 DAW 来进行 Dolby Atmos 内容创作的工作流，熟悉 Dolby Atmos Renderer（渲染器）以及其他组件。&lt;br&gt;在深入了解 Dolby Atmos 工作流之前，我们先来了解一下 Dolby Atmos 的概念，搞清楚 Dolby Atmos 的内容是怎么交付给消费者端的。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;</summary>
+    
+    
+    
+    <category term="混音知识" scheme="https://alistarofficial.github.io/categories/%E6%B7%B7%E9%9F%B3%E7%9F%A5%E8%AF%86/"/>
+    
+    
+    <category term="译制教程" scheme="https://alistarofficial.github.io/tags/%E8%AF%91%E5%88%B6%E6%95%99%E7%A8%8B/"/>
+    
+    <category term="全景声" scheme="https://alistarofficial.github.io/tags/%E5%85%A8%E6%99%AF%E5%A3%B0/"/>
+    
+    <category term="dolbyatmos" scheme="https://alistarofficial.github.io/tags/dolbyatmos/"/>
+    
+  </entry>
+  
+  <entry>
     <title>什么是环绕声？5.1，7.1，杜比全景声全解</title>
     <link href="https://alistarofficial.github.io/2023/01/22/%E4%BB%80%E4%B9%88%E6%98%AF%E7%8E%AF%E7%BB%95%E5%A3%B0%EF%BC%9F5-1%EF%BC%8C7-1%EF%BC%8C%E6%9D%9C%E6%AF%94%E5%85%A8%E6%99%AF%E5%A3%B0%E5%85%A8%E8%A7%A3/"/>
     <id>https://alistarofficial.github.io/2023/01/22/%E4%BB%80%E4%B9%88%E6%98%AF%E7%8E%AF%E7%BB%95%E5%A3%B0%EF%BC%9F5-1%EF%BC%8C7-1%EF%BC%8C%E6%9D%9C%E6%AF%94%E5%85%A8%E6%99%AF%E5%A3%B0%E5%85%A8%E8%A7%A3/</id>
     <published>2023-01-21T16:40:05.000Z</published>
-    <updated>2023-01-21T16:52:07.137Z</updated>
+    <updated>2023-02-10T16:47:18.543Z</updated>
     
     
     <summary type="html">&lt;blockquote&gt;
@@ -36,8 +62,6 @@
     
     <category term="全景声" scheme="https://alistarofficial.github.io/tags/%E5%85%A8%E6%99%AF%E5%A3%B0/"/>
     
-    <category term="环绕声" scheme="https://alistarofficial.github.io/tags/%E7%8E%AF%E7%BB%95%E5%A3%B0/"/>
-    
     <category term="dolbyatmos" scheme="https://alistarofficial.github.io/tags/dolbyatmos/"/>
     
   </entry>
@@ -47,7 +71,7 @@
     <link href="https://alistarofficial.github.io/2023/01/19/Valhalla-Room%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%9709%EF%BC%9A%E5%A6%82%E4%BD%95%E5%88%9B%E9%80%A0%E5%87%BA%E4%B8%8D%E8%87%AA%E7%84%B6%E7%9A%84%E5%A4%A7%E5%8E%85%E6%B7%B7%E5%93%8D/"/>
     <id>https://alistarofficial.github.io/2023/01/19/Valhalla-Room%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%9709%EF%BC%9A%E5%A6%82%E4%BD%95%E5%88%9B%E9%80%A0%E5%87%BA%E4%B8%8D%E8%87%AA%E7%84%B6%E7%9A%84%E5%A4%A7%E5%8E%85%E6%B7%B7%E5%93%8D/</id>
     <published>2023-01-19T05:02:11.000Z</published>
-    <updated>2023-01-19T05:29:01.890Z</updated>
+    <updated>2023-02-10T16:49:55.950Z</updated>
     
     
     <summary type="html">&lt;blockquote&gt;
@@ -59,6 +83,10 @@
     <category term="插件说明文档" scheme="https://alistarofficial.github.io/categories/%E6%8F%92%E4%BB%B6%E8%AF%B4%E6%98%8E%E6%96%87%E6%A1%A3/"/>
     
     
+    <category term="插件手册" scheme="https://alistarofficial.github.io/tags/%E6%8F%92%E4%BB%B6%E6%89%8B%E5%86%8C/"/>
+    
+    <category term="译制教程" scheme="https://alistarofficial.github.io/tags/%E8%AF%91%E5%88%B6%E6%95%99%E7%A8%8B/"/>
+    
   </entry>
   
   <entry>
@@ -66,7 +94,7 @@
     <link href="https://alistarofficial.github.io/2023/01/19/Valhalla-Room%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%9708%EF%BC%9A%E5%A6%82%E4%BD%95%E6%A8%A1%E6%8B%9F%E7%9C%9F%E5%AE%9E%E7%9A%84%E9%9F%B3%E4%B9%90%E5%8E%85%E6%B7%B7%E5%93%8D/"/>
     <id>https://alistarofficial.github.io/2023/01/19/Valhalla-Room%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%9708%EF%BC%9A%E5%A6%82%E4%BD%95%E6%A8%A1%E6%8B%9F%E7%9C%9F%E5%AE%9E%E7%9A%84%E9%9F%B3%E4%B9%90%E5%8E%85%E6%B7%B7%E5%93%8D/</id>
     <published>2023-01-19T05:01:59.000Z</published>
-    <updated>2023-01-19T05:30:34.987Z</updated>
+    <updated>2023-02-10T16:49:50.902Z</updated>
     
     
     <summary type="html">&lt;blockquote&gt;
@@ -78,6 +106,10 @@
     <category term="插件说明文档" scheme="https://alistarofficial.github.io/categories/%E6%8F%92%E4%BB%B6%E8%AF%B4%E6%98%8E%E6%96%87%E6%A1%A3/"/>
     
     
+    <category term="插件手册" scheme="https://alistarofficial.github.io/tags/%E6%8F%92%E4%BB%B6%E6%89%8B%E5%86%8C/"/>
+    
+    <category term="译制教程" scheme="https://alistarofficial.github.io/tags/%E8%AF%91%E5%88%B6%E6%95%99%E7%A8%8B/"/>
+    
   </entry>
   
   <entry>
@@ -85,7 +117,7 @@
     <link href="https://alistarofficial.github.io/2023/01/19/Valhalla-Room%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%9707%EF%BC%9A%E5%A6%82%E4%BD%95%E6%A8%A1%E6%8B%9F%E6%95%99%E5%A0%82%E6%B7%B7%E5%93%8D/"/>
     <id>https://alistarofficial.github.io/2023/01/19/Valhalla-Room%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%9707%EF%BC%9A%E5%A6%82%E4%BD%95%E6%A8%A1%E6%8B%9F%E6%95%99%E5%A0%82%E6%B7%B7%E5%93%8D/</id>
     <published>2023-01-19T05:01:47.000Z</published>
-    <updated>2023-01-19T05:28:45.155Z</updated>
+    <updated>2023-02-10T16:49:45.340Z</updated>
     
     
     <summary type="html">&lt;blockquote&gt;
@@ -97,6 +129,10 @@
     <category term="插件说明文档" scheme="https://alistarofficial.github.io/categories/%E6%8F%92%E4%BB%B6%E8%AF%B4%E6%98%8E%E6%96%87%E6%A1%A3/"/>
     
     
+    <category term="插件手册" scheme="https://alistarofficial.github.io/tags/%E6%8F%92%E4%BB%B6%E6%89%8B%E5%86%8C/"/>
+    
+    <category term="译制教程" scheme="https://alistarofficial.github.io/tags/%E8%AF%91%E5%88%B6%E6%95%99%E7%A8%8B/"/>
+    
   </entry>
   
   <entry>
@@ -104,7 +140,7 @@
     <link href="https://alistarofficial.github.io/2023/01/19/Valhalla-Room%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%9706%EF%BC%9A%E6%99%9A%E6%9C%9F%E5%8F%8D%E5%B0%84%E7%9A%84%E6%8E%A7%E5%88%B6%E5%8F%82%E6%95%B0/"/>
     <id>https://alistarofficial.github.io/2023/01/19/Valhalla-Room%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%9706%EF%BC%9A%E6%99%9A%E6%9C%9F%E5%8F%8D%E5%B0%84%E7%9A%84%E6%8E%A7%E5%88%B6%E5%8F%82%E6%95%B0/</id>
     <published>2023-01-19T05:01:36.000Z</published>
-    <updated>2023-01-19T05:28:34.738Z</updated>
+    <updated>2023-02-10T16:49:40.178Z</updated>
     
     
     <summary type="html">&lt;blockquote&gt;
@@ -116,6 +152,10 @@
     <category term="插件说明文档" scheme="https://alistarofficial.github.io/categories/%E6%8F%92%E4%BB%B6%E8%AF%B4%E6%98%8E%E6%96%87%E6%A1%A3/"/>
     
     
+    <category term="插件手册" scheme="https://alistarofficial.github.io/tags/%E6%8F%92%E4%BB%B6%E6%89%8B%E5%86%8C/"/>
+    
+    <category term="译制教程" scheme="https://alistarofficial.github.io/tags/%E8%AF%91%E5%88%B6%E6%95%99%E7%A8%8B/"/>
+    
   </entry>
   
   <entry>
@@ -123,7 +163,7 @@
     <link href="https://alistarofficial.github.io/2023/01/19/Valhalla-Room%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%9705%EF%BC%9A%E6%97%A9%E6%9C%9F%E5%8F%8D%E5%B0%84-vs-%E6%97%A9%E6%9C%9F%E8%83%BD%E9%87%8F/"/>
     <id>https://alistarofficial.github.io/2023/01/19/Valhalla-Room%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%9705%EF%BC%9A%E6%97%A9%E6%9C%9F%E5%8F%8D%E5%B0%84-vs-%E6%97%A9%E6%9C%9F%E8%83%BD%E9%87%8F/</id>
     <published>2023-01-19T05:01:20.000Z</published>
-    <updated>2023-01-19T05:28:26.323Z</updated>
+    <updated>2023-02-10T16:49:35.164Z</updated>
     
     
     <summary type="html">&lt;blockquote&gt;
@@ -135,6 +175,10 @@
     <category term="插件说明文档" scheme="https://alistarofficial.github.io/categories/%E6%8F%92%E4%BB%B6%E8%AF%B4%E6%98%8E%E6%96%87%E6%A1%A3/"/>
     
     
+    <category term="插件手册" scheme="https://alistarofficial.github.io/tags/%E6%8F%92%E4%BB%B6%E6%89%8B%E5%86%8C/"/>
+    
+    <category term="译制教程" scheme="https://alistarofficial.github.io/tags/%E8%AF%91%E5%88%B6%E6%95%99%E7%A8%8B/"/>
+    
   </entry>
   
   <entry>
@@ -142,7 +186,7 @@
     <link href="https://alistarofficial.github.io/2023/01/19/Valhalla-Room%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%9704%EF%BC%9A%E6%97%A9%E6%9C%9F%E6%B7%B7%E5%93%8D%E7%9A%84%E6%8E%A7%E5%88%B6%E5%8F%82%E6%95%B0/"/>
     <id>https://alistarofficial.github.io/2023/01/19/Valhalla-Room%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%9704%EF%BC%9A%E6%97%A9%E6%9C%9F%E6%B7%B7%E5%93%8D%E7%9A%84%E6%8E%A7%E5%88%B6%E5%8F%82%E6%95%B0/</id>
     <published>2023-01-19T05:00:32.000Z</published>
-    <updated>2023-01-19T05:28:14.078Z</updated>
+    <updated>2023-02-10T16:49:30.129Z</updated>
     
     
     <summary type="html">&lt;blockquote&gt;
@@ -154,6 +198,10 @@
     <category term="插件说明文档" scheme="https://alistarofficial.github.io/categories/%E6%8F%92%E4%BB%B6%E8%AF%B4%E6%98%8E%E6%96%87%E6%A1%A3/"/>
     
     
+    <category term="插件手册" scheme="https://alistarofficial.github.io/tags/%E6%8F%92%E4%BB%B6%E6%89%8B%E5%86%8C/"/>
+    
+    <category term="译制教程" scheme="https://alistarofficial.github.io/tags/%E8%AF%91%E5%88%B6%E6%95%99%E7%A8%8B/"/>
+    
   </entry>
   
   <entry>
@@ -161,7 +209,7 @@
     <link href="https://alistarofficial.github.io/2023/01/19/Valhalla-Room%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%9703%EF%BC%9A%E6%B7%B7%E5%93%8D%E6%A8%A1%E5%BC%8F/"/>
     <id>https://alistarofficial.github.io/2023/01/19/Valhalla-Room%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%9703%EF%BC%9A%E6%B7%B7%E5%93%8D%E6%A8%A1%E5%BC%8F/</id>
     <published>2023-01-19T04:59:27.000Z</published>
-    <updated>2023-01-19T05:32:15.150Z</updated>
+    <updated>2023-02-10T16:49:24.301Z</updated>
     
     
     <summary type="html">&lt;blockquote&gt;
@@ -176,6 +224,10 @@
     <category term="插件说明文档" scheme="https://alistarofficial.github.io/categories/%E6%8F%92%E4%BB%B6%E8%AF%B4%E6%98%8E%E6%96%87%E6%A1%A3/"/>
     
     
+    <category term="插件手册" scheme="https://alistarofficial.github.io/tags/%E6%8F%92%E4%BB%B6%E6%89%8B%E5%86%8C/"/>
+    
+    <category term="译制教程" scheme="https://alistarofficial.github.io/tags/%E8%AF%91%E5%88%B6%E6%95%99%E7%A8%8B/"/>
+    
   </entry>
   
   <entry>
@@ -183,7 +235,7 @@
     <link href="https://alistarofficial.github.io/2023/01/19/Valhalla-Room%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%9702%EF%BC%9A%E6%BB%91%E5%9D%97/"/>
     <id>https://alistarofficial.github.io/2023/01/19/Valhalla-Room%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%9702%EF%BC%9A%E6%BB%91%E5%9D%97/</id>
     <published>2023-01-19T04:59:10.000Z</published>
-    <updated>2023-01-19T05:32:33.979Z</updated>
+    <updated>2023-02-10T16:49:19.013Z</updated>
     
     
     <summary type="html">&lt;blockquote&gt;
@@ -195,6 +247,10 @@
     <category term="插件说明文档" scheme="https://alistarofficial.github.io/categories/%E6%8F%92%E4%BB%B6%E8%AF%B4%E6%98%8E%E6%96%87%E6%A1%A3/"/>
     
     
+    <category term="插件手册" scheme="https://alistarofficial.github.io/tags/%E6%8F%92%E4%BB%B6%E6%89%8B%E5%86%8C/"/>
+    
+    <category term="译制教程" scheme="https://alistarofficial.github.io/tags/%E8%AF%91%E5%88%B6%E6%95%99%E7%A8%8B/"/>
+    
   </entry>
   
   <entry>
@@ -202,7 +258,7 @@
     <link href="https://alistarofficial.github.io/2023/01/19/Valhalla-Room%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%9701%EF%BC%9A%E6%A6%82%E8%A7%88/"/>
     <id>https://alistarofficial.github.io/2023/01/19/Valhalla-Room%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%9701%EF%BC%9A%E6%A6%82%E8%A7%88/</id>
     <published>2023-01-19T04:58:39.000Z</published>
-    <updated>2023-01-19T05:29:46.496Z</updated>
+    <updated>2023-02-10T16:49:11.455Z</updated>
     
     
     <summary type="html">&lt;blockquote&gt;
@@ -213,6 +269,10 @@
     
     <category term="插件说明文档" scheme="https://alistarofficial.github.io/categories/%E6%8F%92%E4%BB%B6%E8%AF%B4%E6%98%8E%E6%96%87%E6%A1%A3/"/>
     
+    
+    <category term="插件手册" scheme="https://alistarofficial.github.io/tags/%E6%8F%92%E4%BB%B6%E6%89%8B%E5%86%8C/"/>
+    
+    <category term="译制教程" scheme="https://alistarofficial.github.io/tags/%E8%AF%91%E5%88%B6%E6%95%99%E7%A8%8B/"/>
     
   </entry>
   
