@@ -6,7 +6,7 @@
   <link href="https://alistarofficial.github.io/atom.xml" rel="self"/>
   
   <link href="https://alistarofficial.github.io/"/>
-  <updated>2023-02-10T16:48:36.127Z</updated>
+  <updated>2023-02-27T12:55:18.302Z</updated>
   <id>https://alistarofficial.github.io/</id>
   
   <author>
@@ -15,6 +15,56 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>杜比全景声后期制作官方教程 1.3 杜比全景声内容信号流</title>
+    <link href="https://alistarofficial.github.io/2023/02/27/%E6%9D%9C%E6%AF%94%E5%85%A8%E6%99%AF%E5%A3%B0%E5%AE%98%E6%96%B9%E6%95%99%E7%A8%8B-1-3-%E6%9D%9C%E6%AF%94%E5%85%A8%E6%99%AF%E5%A3%B0%E5%86%85%E5%AE%B9%E4%BF%A1%E5%8F%B7%E6%B5%81/"/>
+    <id>https://alistarofficial.github.io/2023/02/27/%E6%9D%9C%E6%AF%94%E5%85%A8%E6%99%AF%E5%A3%B0%E5%AE%98%E6%96%B9%E6%95%99%E7%A8%8B-1-3-%E6%9D%9C%E6%AF%94%E5%85%A8%E6%99%AF%E5%A3%B0%E5%86%85%E5%AE%B9%E4%BF%A1%E5%8F%B7%E6%B5%81/</id>
+    <published>2023-02-27T12:52:49.000Z</published>
+    <updated>2023-02-27T12:55:18.302Z</updated>
+    
+    
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;本节讲述了 Dolby Atmos Renderer 的九个核心功能以及使用外部工作站运行 Renderer 时的信号流，敬请查收。&lt;/p&gt;
+&lt;/blockquote&gt;</summary>
+    
+    
+    
+    <category term="混音知识" scheme="https://alistarofficial.github.io/categories/%E6%B7%B7%E9%9F%B3%E7%9F%A5%E8%AF%86/"/>
+    
+    
+    <category term="译制教程" scheme="https://alistarofficial.github.io/tags/%E8%AF%91%E5%88%B6%E6%95%99%E7%A8%8B/"/>
+    
+    <category term="全景声" scheme="https://alistarofficial.github.io/tags/%E5%85%A8%E6%99%AF%E5%A3%B0/"/>
+    
+    <category term="dolbyatmos" scheme="https://alistarofficial.github.io/tags/dolbyatmos/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>杜比全景声后期制作教程 1.2 Dolby Atmos 组件</title>
+    <link href="https://alistarofficial.github.io/2023/02/27/%E6%9D%9C%E6%AF%94%E5%85%A8%E6%99%AF%E5%A3%B0%E5%AE%98%E6%96%B9%E6%95%99%E7%A8%8B-1-2-Dolby-Atmos-%E7%BB%84%E4%BB%B6/"/>
+    <id>https://alistarofficial.github.io/2023/02/27/%E6%9D%9C%E6%AF%94%E5%85%A8%E6%99%AF%E5%A3%B0%E5%AE%98%E6%96%B9%E6%95%99%E7%A8%8B-1-2-Dolby-Atmos-%E7%BB%84%E4%BB%B6/</id>
+    <published>2023-02-27T12:52:10.000Z</published>
+    <updated>2023-02-27T12:54:22.267Z</updated>
+    
+    
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;本文概述了 Dolby Atmos Renderer 的不同配置，DAW 和 Renderer 的协同使用，系统时钟和同步，监听杜比全景声内容以及视频重放，敬请查收。&lt;/p&gt;
+&lt;/blockquote&gt;</summary>
+    
+    
+    
+    <category term="混音知识" scheme="https://alistarofficial.github.io/categories/%E6%B7%B7%E9%9F%B3%E7%9F%A5%E8%AF%86/"/>
+    
+    
+    <category term="译制教程" scheme="https://alistarofficial.github.io/tags/%E8%AF%91%E5%88%B6%E6%95%99%E7%A8%8B/"/>
+    
+    <category term="全景声" scheme="https://alistarofficial.github.io/tags/%E5%85%A8%E6%99%AF%E5%A3%B0/"/>
+    
+    <category term="dolbyatmos" scheme="https://alistarofficial.github.io/tags/dolbyatmos/"/>
+    
+  </entry>
   
   <entry>
     <title>杜比全景声后期制作官方教程 1.1 超越多声道音频</title>

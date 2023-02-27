@@ -17,7 +17,7 @@
         name="viewport"
         content="width=device-width, initial-scale=1, maximum-scale=1"
       />
-      <title>Tag: dolbyatmos |  啊嘞</title>
+      <title>杜比全景声后期制作教程 1.2 Dolby Atmos 组件 |  啊嘞</title>
   <meta name="generator" content="hexo-theme-ayer">
       
       <link rel="shortcut icon" href="/favicon.ico" />
@@ -78,147 +78,232 @@ var _hmt = _hmt || [];
       
     <main class="content on">
       <section class="outer">
+  <article
+  id="post-杜比全景声官方教程-1-2-Dolby-Atmos-组件"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h1 class="article-title sea-center" style="border-left:0" itemprop="name">
+  杜比全景声后期制作教程 1.2 Dolby Atmos 组件
+</h1>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2023/02/27/%E6%9D%9C%E6%AF%94%E5%85%A8%E6%99%AF%E5%A3%B0%E5%AE%98%E6%96%B9%E6%95%99%E7%A8%8B-1-2-Dolby-Atmos-%E7%BB%84%E4%BB%B6/" class="article-date">
+  <time datetime="2023-02-27T12:52:10.000Z" itemprop="datePublished">2023-02-27</time>
+</a> 
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/%E6%B7%B7%E9%9F%B3%E7%9F%A5%E8%AF%86/">混音知识</a>
+  </div>
   
-  <ul class="ads">
-    
-        <li>
-            <a href="">
-                <img src="" width="" alt="">
-            </a>
-        </li>
-    
-        <li>
-            <a href="">
-                <img src="" width="" alt="">
-            </a>
-        </li>
-    
+<div class="word_count">
+    <span class="post-time">
+        <span class="post-meta-item-icon">
+            <i class="ri-quill-pen-line"></i>
+            <span class="post-meta-item-text"> 字数统计:</span>
+            <span class="post-count">1.4k</span>
+        </span>
+    </span>
+
+    <span class="post-time">
+        &nbsp; | &nbsp;
+        <span class="post-meta-item-icon">
+            <i class="ri-book-open-line"></i>
+            <span class="post-meta-item-text"> 阅读时长≈</span>
+            <span class="post-count">5 分钟</span>
+        </span>
+    </span>
+</div>
+ 
+    </div>
+      
+    <div class="tocbot"></div>
+
+
+
+
+  
+    <div class="article-entry" itemprop="articleBody">
+       
+  <blockquote>
+<p>本文概述了 Dolby Atmos Renderer 的不同配置，DAW 和 Renderer 的协同使用，系统时钟和同步，监听杜比全景声内容以及视频重放，敬请查收。</p>
+</blockquote>
+<span id="more"></span>
+
+<h1 id="Dolby-Atmos-Renderer-的不同配置"><a href="#Dolby-Atmos-Renderer-的不同配置" class="headerlink" title="Dolby Atmos Renderer 的不同配置"></a>Dolby Atmos Renderer 的不同配置</h1><p><code>Dolby Atmos Renderer</code> 软件可通过以下方式运行：</p>
+<ul>
+<li>在 DAW 运行的设备上运行</li>
+<li>在专门的 Rendering 和 Mastering 工作站中外部运行</li>
+<li>在特定的 DAW 中原生使用 Renderer</li>
 </ul>
-  
-  
-  <article class="articles">
-    
-    
-    <h1 class="page-type-title">#&nbspdolbyatmos</h1>
-    
-    
-  
-  
-  
-  
-  
-  
-  <div class="archives-wrap">
-    <div class="archive-year-wrap">
-      <a href="/archives/2023" class="archive-year">2023</a>
-    </div>
-    <div class="archives">
-      
-      <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2023/02/27/%E6%9D%9C%E6%AF%94%E5%85%A8%E6%99%AF%E5%A3%B0%E5%AE%98%E6%96%B9%E6%95%99%E7%A8%8B-1-3-%E6%9D%9C%E6%AF%94%E5%85%A8%E6%99%AF%E5%A3%B0%E5%86%85%E5%AE%B9%E4%BF%A1%E5%8F%B7%E6%B5%81/" class="archive-article-date">
-  <time datetime="2023-02-27T12:52:49.000Z" itemprop="datePublished">02/27</time>
-</a>
-       
-<h2 itemprop="name">
-  <a class="archive-article-title" href="/2023/02/27/%E6%9D%9C%E6%AF%94%E5%85%A8%E6%99%AF%E5%A3%B0%E5%AE%98%E6%96%B9%E6%95%99%E7%A8%8B-1-3-%E6%9D%9C%E6%AF%94%E5%85%A8%E6%99%AF%E5%A3%B0%E5%86%85%E5%AE%B9%E4%BF%A1%E5%8F%B7%E6%B5%81/"
-    >杜比全景声后期制作官方教程 1.3 杜比全景声内容信号流</a> 
-</h2>
+<p>当 Dolby Atmos Renderer 在专门的外部 Rendering &amp; Mastering Workstation（RMW，渲染和母带工作站）中运行时，可以使用四种平台和 I &#x2F; O 配置。杜比经销商提供以下配置：</p>
+<ul>
+<li>配备 RME MADI 和同步 I &#x2F; O 的 Windows 10（电脑为自定配置的 Dell 7920）</li>
+<li>配备 Focusrite PCIeR Dante I &#x2F; O 的 Windows 10（电脑为自定配置的 Dell 7920）</li>
+<li>配备 Focusrite PCIeR Dante I &#x2F; O 的 Mac（Mac 硬件最低为 Mini 或者 Pro 规格）</li>
+<li>配备 RME MADIface XT I &#x2F; O 的 Mac（Mac 硬件最低为 Mini 或者 Pro 规格）</li>
+</ul>
+<p>在下一个课程中，我们会对这些配置项进行更深入的讨论。</p>
+<h1 id="DAW-和-Dolby-Atmos-Renderer"><a href="#DAW-和-Dolby-Atmos-Renderer" class="headerlink" title="DAW 和 Dolby Atmos Renderer"></a>DAW 和 Dolby Atmos Renderer</h1><p>DAW 是沉浸式音频的创意平台，也是 Dolby Atmos Renderer 中音床、声音对象、OAMD 和 纵向时间码（Longitudinal Time Code，LTC）的来源。</p>
+<p>许多 DAW 都能和 Dolby Atmos Renderer 配合使用。在本课程中，将讨论 Dolby Atmos Renderer 和 <code>Pro Tools Ultimate</code> 两者的结合使用。Pro Tools Ultimate 是第一款支持和 Dolby Atmos Renderer 配套使用的 DAW，在音频后期制作和音乐制作环境中都占有重要的市场份额，其他 DAW 以及相应的配置会在第 13 课中讨论。</p>
+<p>官方建议 DAW 最好能处理传递 128 轨的音频信息给 Dolby Atmos Renderer。尽管创作杜比全景声内容不是一定要用到 128 个输入，但支持这么多轨数确实能保证所需的灵活性，确保在不同的 DAW 和工作室之间得以移动项目。</p>
+<p>另外，<strong>高速的存储</strong>也是需要考虑的因素。虽然大多数轨道量较大的工程都会要求高速存储，但是，如果 Renderer 是运行在 DAW 内部，并且重渲染音频是录到同一个 DAW 里的话，就需要更加注意存储速度和容量。</p>
+<p>此外，<strong>专用的控制台</strong>也值得考虑。虽然有混音师可以用鼠标就出色地完成工作，但在处理沉浸式音频时，专用的控制台可以提供更高的效率。市面上有各种价格的控制台，专用于 Pro Tools 的也有很多。</p>
+<h1 id="系统时钟和同步"><a href="#系统时钟和同步" class="headerlink" title="系统时钟和同步"></a>系统时钟和同步</h1><p>如果一个工作室是在专门的 Rendering &amp; Mastering 工作站上运行 Dolby Atmos Renderer，那就要求有一个<strong>主系统时钟</strong>（Master Clock，MC）。这个主时钟需要是一个 Word Clock（WC） 发生器，能够分布式输出信号到 DAW 的音频接口和 Render 硬件。对于 Dante 系统来说，如果网络没有和同源的 PTP 时钟同步，那么就需要一个单独的设备来锁定 Word Clock。此外，设备间应<strong>避免使用菊花式拓扑连接</strong>（即用多个设备连接 Word Clock 而不是从信号源直接分发）。</p>
+<p>系统时钟需要具备稳定性，避免由于时间码和采样点之间的差异而导致 Dolby Atmos Renderer 脱离录制状态。</p>
+<p>如果工作室采用的是将 Dolby Atmos Renderer 运行在和 DAW 同一设备的方式，那么就不必需一个专门的主系统时钟，而是视接口和音频系统配置决定。</p>
+<p>Dolby Atmos Renderer 跟随 DAW 发出的纵向时间码。纵向时间码可以来源于带有纵向时间码生成器的同步接口，比如 <code>Avid Sync HD</code>，也可以来源于 <code>Dolby LTC Generator</code>（纵向时间码生成器）插件。</p>
+<p>音频信号和纵向时间码之间的延迟数值会因为 Renderer 和硬件配置的不同而有很大差别。对于每种配置，Renderer 中都有可用的预置，并且也可以在 Renderer 软件中调节延迟数值。</p>
+<h1 id="Dolby-Atmos-的监听和监听控制器"><a href="#Dolby-Atmos-的监听和监听控制器" class="headerlink" title="Dolby Atmos 的监听和监听控制器"></a>Dolby Atmos 的监听和监听控制器</h1><p>混音面向家庭用户的 Dolby Atmos 内容时，<strong>推荐使用 <code>7.1.4</code> 的扬声器布局</strong>。四只天空通道的扬声器需要是真正的头顶扬声器，而不是放在地面的向上发声的扬声器（因为在做过声学处理的工作室中，向上发声的扬声器的信号会被天花板上的声学面板吸收一部分）。扩展的扬声器布局，比如 9.1.4，9.1.6 或者更高配置都是可以的，扬声器阵列也可以正常地适配到 Dolby Atmos 环境中。</p>
+<p><em>注：扬声器摆位和测量会在单独的文档中详细解释。</em></p>
+<p>Dolby Atmos Renderer中内置的 <code>Binaural renderer</code> 可以让我们通过耳机来监听，方便我们检查混音，快速地开始工作。当要交付成品时，应该<strong>首先使用扬声器</strong>来检查混音。</p>
+<p>Dolby Atmos Renderer 中可以实现扬声器的衰减、mute 和 solo 功能，然而，专门的支持 7.1.4 配置的监听控制系统能够让我们更好地控制扬声器系统，并且还具有着完整的 <strong>B-Chain</strong> 功能以及<strong>信号源切换</strong>功能。</p>
+<h1 id="视频播放"><a href="#视频播放" class="headerlink" title="视频播放"></a>视频播放</h1><p>在影视后期工作中，要求通过专门的接口来回放DAW 中的视频。许多 PCIe 或者雷电接口都是可用的。</p>
  
-
-    </header>
-    
-    
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/dolbyatmos/" rel="tag">dolbyatmos</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%85%A8%E6%99%AF%E5%A3%B0/" rel="tag">全景声</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E8%AF%91%E5%88%B6%E6%95%99%E7%A8%8B/" rel="tag">译制教程</a></li></ul>
-
-    
-  </div>
-</article>
-      
-  
-  
-      <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2023/02/27/%E6%9D%9C%E6%AF%94%E5%85%A8%E6%99%AF%E5%A3%B0%E5%AE%98%E6%96%B9%E6%95%99%E7%A8%8B-1-2-Dolby-Atmos-%E7%BB%84%E4%BB%B6/" class="archive-article-date">
-  <time datetime="2023-02-27T12:52:10.000Z" itemprop="datePublished">02/27</time>
-</a>
-       
-<h2 itemprop="name">
-  <a class="archive-article-title" href="/2023/02/27/%E6%9D%9C%E6%AF%94%E5%85%A8%E6%99%AF%E5%A3%B0%E5%AE%98%E6%96%B9%E6%95%99%E7%A8%8B-1-2-Dolby-Atmos-%E7%BB%84%E4%BB%B6/"
-    >杜比全景声后期制作教程 1.2 Dolby Atmos 组件</a> 
-</h2>
- 
-
-    </header>
-    
-    
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/dolbyatmos/" rel="tag">dolbyatmos</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%85%A8%E6%99%AF%E5%A3%B0/" rel="tag">全景声</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E8%AF%91%E5%88%B6%E6%95%99%E7%A8%8B/" rel="tag">译制教程</a></li></ul>
-
-    
-  </div>
-</article>
-      
-  
-  
-      <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2023/02/11/%E6%9D%9C%E6%AF%94%E5%85%A8%E6%99%AF%E5%A3%B0%E5%90%8E%E6%9C%9F%E5%88%B6%E4%BD%9C%E5%AE%98%E6%96%B9%E6%95%99%E7%A8%8B-1-1-%E8%B6%85%E8%B6%8A%E5%A4%9A%E5%A3%B0%E9%81%93%E9%9F%B3%E9%A2%91/" class="archive-article-date">
-  <time datetime="2023-02-10T16:46:01.000Z" itemprop="datePublished">02/11</time>
-</a>
-       
-<h2 itemprop="name">
-  <a class="archive-article-title" href="/2023/02/11/%E6%9D%9C%E6%AF%94%E5%85%A8%E6%99%AF%E5%A3%B0%E5%90%8E%E6%9C%9F%E5%88%B6%E4%BD%9C%E5%AE%98%E6%96%B9%E6%95%99%E7%A8%8B-1-1-%E8%B6%85%E8%B6%8A%E5%A4%9A%E5%A3%B0%E9%81%93%E9%9F%B3%E9%A2%91/"
-    >杜比全景声后期制作官方教程 1.1 超越多声道音频</a> 
-</h2>
- 
-
-    </header>
-    
-    
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/dolbyatmos/" rel="tag">dolbyatmos</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%85%A8%E6%99%AF%E5%A3%B0/" rel="tag">全景声</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E8%AF%91%E5%88%B6%E6%95%99%E7%A8%8B/" rel="tag">译制教程</a></li></ul>
-
-    
-  </div>
-</article>
-      
-  
-  
-      <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2023/01/22/%E4%BB%80%E4%B9%88%E6%98%AF%E7%8E%AF%E7%BB%95%E5%A3%B0%EF%BC%9F5-1%EF%BC%8C7-1%EF%BC%8C%E6%9D%9C%E6%AF%94%E5%85%A8%E6%99%AF%E5%A3%B0%E5%85%A8%E8%A7%A3/" class="archive-article-date">
-  <time datetime="2023-01-21T16:40:05.000Z" itemprop="datePublished">01/22</time>
-</a>
-       
-<h2 itemprop="name">
-  <a class="archive-article-title" href="/2023/01/22/%E4%BB%80%E4%B9%88%E6%98%AF%E7%8E%AF%E7%BB%95%E5%A3%B0%EF%BC%9F5-1%EF%BC%8C7-1%EF%BC%8C%E6%9D%9C%E6%AF%94%E5%85%A8%E6%99%AF%E5%A3%B0%E5%85%A8%E8%A7%A3/"
-    >什么是环绕声？5.1，7.1，杜比全景声全解</a> 
-</h2>
- 
-
-    </header>
-    
-    
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/dolbyatmos/" rel="tag">dolbyatmos</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%85%A8%E6%99%AF%E5%A3%B0/" rel="tag">全景声</a></li></ul>
-
-    
-  </div>
-</article>
-      
+      <!-- reward -->
       
     </div>
-  </div>
-  
-  
+    
 
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+<div class="share-btn">
+      <span class="share-sns share-outer">
+        <i class="ri-share-forward-line"></i>
+        分享
+      </span>
+      <div class="share-wrap">
+        <i class="arrow"></i>
+        <div class="share-icons">
+          
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="ri-weibo-fill"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="ri-wechat-fill"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="ri-qq-fill"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="ri-douban-line"></i>
+          </a>
+          <!-- <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a> -->
+          
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="ri-facebook-circle-fill"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="ri-twitter-fill"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="ri-google-fill"></i>
+          </a>
+        </div>
+      </div>
+</div>
+
+<div class="wx-share-modal">
+    <a class="modal-close" href="javascript:;"><i class="ri-close-circle-line"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://alistarofficial.github.io/2023/02/27/%E6%9D%9C%E6%AF%94%E5%85%A8%E6%99%AF%E5%A3%B0%E5%AE%98%E6%96%B9%E6%95%99%E7%A8%8B-1-2-Dolby-Atmos-%E7%BB%84%E4%BB%B6/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div id="share-mask"></div>  
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/dolbyatmos/" rel="tag">dolbyatmos</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%85%A8%E6%99%AF%E5%A3%B0/" rel="tag">全景声</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E8%AF%91%E5%88%B6%E6%95%99%E7%A8%8B/" rel="tag">译制教程</a></li></ul>
+
+    </footer>
+  </div>
+
+   
+  <nav class="article-nav">
+    
+      <a href="/2023/02/27/%E6%9D%9C%E6%AF%94%E5%85%A8%E6%99%AF%E5%A3%B0%E5%AE%98%E6%96%B9%E6%95%99%E7%A8%8B-1-3-%E6%9D%9C%E6%AF%94%E5%85%A8%E6%99%AF%E5%A3%B0%E5%86%85%E5%AE%B9%E4%BF%A1%E5%8F%B7%E6%B5%81/" class="article-nav-link">
+        <strong class="article-nav-caption">上一篇</strong>
+        <div class="article-nav-title">
+          
+            杜比全景声后期制作官方教程 1.3 杜比全景声内容信号流
+          
+        </div>
+      </a>
+    
+    
+      <a href="/2023/02/11/%E6%9D%9C%E6%AF%94%E5%85%A8%E6%99%AF%E5%A3%B0%E5%90%8E%E6%9C%9F%E5%88%B6%E4%BD%9C%E5%AE%98%E6%96%B9%E6%95%99%E7%A8%8B-1-1-%E8%B6%85%E8%B6%8A%E5%A4%9A%E5%A3%B0%E9%81%93%E9%9F%B3%E9%A2%91/" class="article-nav-link">
+        <strong class="article-nav-caption">下一篇</strong>
+        <div class="article-nav-title">杜比全景声后期制作官方教程 1.1 超越多声道音频</div>
+      </a>
+    
+  </nav>
+
+   
+<!-- valine评论 -->
+<div id="vcomments-box">
+  <div id="vcomments"></div>
+</div>
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src="https://cdn.staticfile.org/valine/1.4.16/Valine.min.js"></script>
+<script>
+  new Valine({
+    el: "#vcomments",
+    app_id: "SvZlfCeaemOPBcxam4JDZHiF-gzGzoHsz",
+    app_key: "7qpfVZYJgXhCttVB2NNKebFv",
+    path: window.location.pathname,
+    avatar: "robohash",
+    placeholder: "给我的文章加点评论吧~",
+    recordIP: true,
+  });
+  const infoEle = document.querySelector("#vcomments .info");
+  if (infoEle && infoEle.childNodes && infoEle.childNodes.length > 0) {
+    infoEle.childNodes.forEach(function (item) {
+      item.parentNode.removeChild(item);
+    });
+  }
+</script>
+<style>
+  #vcomments-box {
+    padding: 5px 30px;
+  }
+
+  @media screen and (max-width: 800px) {
+    #vcomments-box {
+      padding: 5px 0px;
+    }
+  }
+
+  #vcomments-box #vcomments {
+    background-color: #fff;
+  }
+
+  .v .vlist .vcard .vh {
+    padding-right: 20px;
+  }
+
+  .v .vlist .vcard {
+    padding-left: 10px;
+  }
+</style>
+
+ 
+   
   
+    
+</article>
+
 </section>
       <footer class="footer">
   <div class="outer">
@@ -355,6 +440,22 @@ var _hmt = _hmt || [];
 <script src="/js/lazyload.min.js"></script>
 
 <!-- Tocbot -->
+ 
+<script src="/js/tocbot.min.js"></script>
+
+<script>
+  tocbot.init({
+    tocSelector: ".tocbot",
+    contentSelector: ".article-entry",
+    headingSelector: "h1, h2, h3, h4, h5, h6",
+    hasInnerContainers: true,
+    scrollSmooth: true,
+    scrollContainer: "main",
+    positionFixedSelector: ".tocbot",
+    positionFixedClass: "is-position-fixed",
+    fixedSidebarOffset: "auto",
+  });
+</script>
 
 <script src="https://cdn.staticfile.org/jquery-modal/0.9.2/jquery.modal.min.js"></script>
 <link
