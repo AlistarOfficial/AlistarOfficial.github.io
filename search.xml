@@ -20,6 +20,118 @@
 ]]></content>
   </entry>
   <entry>
+    <title>杜比全景声官方后期制作教程 2.1 在外部工作站上运行 Dolby Atmos Renderer</title>
+    <url>/2023/03/07/%E6%9D%9C%E6%AF%94%E5%85%A8%E6%99%AF%E5%A3%B0%E5%AE%98%E6%96%B9%E5%90%8E%E6%9C%9F%E5%88%B6%E4%BD%9C%E6%95%99%E7%A8%8B-2-1-%E5%9C%A8%E5%A4%96%E9%83%A8%E5%B7%A5%E4%BD%9C%E7%AB%99%E4%B8%8A%E8%BF%90%E8%A1%8C-Dolby-Atmos-Renderer/</url>
+    <content><![CDATA[<blockquote>
+<p>Dolby Atmos Renderer 是一款广泛应用于音乐、电影和游戏领域的音频处理软件，其能够在不同的硬件平台上实现音频的渲染和母带制作。本文将重点介绍该软件在 Rendering And Mastering Workstations 上的应用，包括基于 MADI 和 Dante 协议的不同配置，以及配套使用的数字音频工作站和相关外围设备等。对于音频制作工作者和相关领域的从业者而言，了解 Dolby Atmos Renderer 在不同平台和配置下的应用和优势，将有助于提高工作效率和音频制作质量。</p>
+</blockquote>
+<p><em>翻译：Alistar</em></p>
+<p><em>原文：Dolby Atmos Music 教程</em></p>
+<span id="more"></span>
+
+<h1 id="一-简介"><a href="#一-简介" class="headerlink" title="一. 简介"></a>一. 简介</h1><p>在外部工作站运行的 Dolby Atmos Renderer 是 Dolby Atmos Renderer 的<strong>旗舰配置</strong>，需要使用 <code>Dolby Atmos Mastering Suite</code> 授权。这套配置推荐用于复杂的 Dolby Atmos 内容创作，因为它把渲染器和 DAW 需要的 CPU 资源分到两台电脑上负荷，并且还可以让多个数字工作站同时作为 Dolby Atmos Renderer 的信号源，以便在各个工作站中独立地进行预混音或者编辑工作。</p>
+<p>外部运行的 Rendering and Mastering 工作站（以下简称 RMW）需要从 Dolby 经销商处购买，到手之前会预配置及测试所有需要的硬件和软件。</p>
+<h1 id="二-使用-MADI-的-RMW-工作站"><a href="#二-使用-MADI-的-RMW-工作站" class="headerlink" title="二. 使用 MADI 的 RMW 工作站"></a>二. 使用 MADI 的 RMW 工作站</h1><p><img src="https://cdn.staticaly.com/gh/AlistarOfficial/Image-saving@master/RMWs-with-madi-io.2sgw7nb2v9o0.jpg"></p>
+<p>RMW 使用 MADI（多通道音频接口，Multi Channel Audio Interface）和 DAW 间往来数字音频信号，主要有三种配置：两种基于 Windows 的配置和一种基于 Mac 的配置。</p>
+<h3 id="MADI-配置-1：RME-HDSPe-及-RME-MADI-FX"><a href="#MADI-配置-1：RME-HDSPe-及-RME-MADI-FX" class="headerlink" title="MADI 配置 1：RME HDSPe 及 RME MADI FX"></a>MADI 配置 1：RME HDSPe 及 RME MADI FX</h3><p><strong>主要组件</strong></p>
+<ol>
+<li>在自定义的 Dell 7920 工作站上运行的Dolby Atmos RMW 包含以下组件：</li>
+</ol>
+<ul>
+<li>RME HPSPe 配置<ul>
+<li>预装两张 RME HDSPe MADI 卡，用于 128 个通道的 I &#x2F; O</li>
+<li>预装一张 RME TCO 卡 用于 LTC 纵向时间码  及时钟输入</li>
+<li>安装 Dolby Atmos Renderer 软件，并用提供的 Dolby Atmos Mastering Suite License 进行授权</li>
+</ul>
+</li>
+<li>RME MADI FX 配置<ul>
+<li>预装一张 MADI FX 卡，用于至少 128 个通道的 I &#x2F; O</li>
+<li>安装 Dolby Atmos Renderer 软件，并用提供的 Dolby Atmos Mastering Suite License 进行授权</li>
+</ul>
+</li>
+</ul>
+<ol start="2">
+<li>运行支持软件的 DAW 系统包含以下组件：</li>
+</ol>
+<ul>
+<li>原生支持 Atmos Panner 并且能够直连 Renderer 的 DAW，或者能够使用 Dolby Atmos Music Panner 插件的 DAW</li>
+<li>一台连接 128 个通道 MADI I &#x2F; O 的硬件</li>
+<li>Dolby Atmos Renderer 的远程控制软件（包含在 Renderer 的安装器里）<ul>
+<li>远程控制软件可以选择安装在单独的电脑上（可以基于 Windows 或 Mac），来节省运行 DAW 这台电脑的屏幕空间</li>
+</ul>
+</li>
+</ul>
+<ol start="3">
+<li>一台同步外围设备，用于为 RMW 生成纵向时间码，并将 DAW 的时钟与 RMW 的 Word Clock 同步</li>
+</ol>
+<p><strong>信号流</strong></p>
+<p>RME HDSPe（左图）及 RME MADI FX（右图）</p>
+<p><img src="https://cdn.staticaly.com/gh/AlistarOfficial/Image-saving@master/RME-HDSPe%E5%8F%8ARME-MADI-FX%E4%BF%A1%E5%8F%B7%E6%B5%81-%E4%B8%AD%E6%96%87.5nydmzqx5u80.jpg"></p>
+<h3 id="MADI-配置-2：RME-MADIface-XT"><a href="#MADI-配置-2：RME-MADIface-XT" class="headerlink" title="MADI 配置 2：RME MADIface XT"></a>MADI 配置 2：RME MADIface XT</h3><p><strong>主要组件</strong></p>
+<ol>
+<li>一台 Dolby Atmos RMW，可以是专门的自定义的 Windows Dell 7920 或者经过认证的 Mac OS 配置。该工作站包含以下组件：</li>
+</ol>
+<ul>
+<li>RME MADIface XT USB 3.0 接口</li>
+<li>安装 Dolby Atmos Renderer 软件，并用提供的 Dolby Atmos Mastering Suite License 进行授权</li>
+</ul>
+<ol start="2">
+<li>运行支持软件的 DAW 系统包含以下组件：</li>
+</ol>
+<ul>
+<li>原生支持 Atmos Panner 并且能够直连 Renderer 的 DAW，或者能够使用 Dolby Atmos Music Panner 插件的 DAW</li>
+<li>一台连接 128 个通道 MADI I &#x2F; O 的硬件</li>
+<li>Dolby Atmos Renderer 的远程控制软件（包含在 Renderer 的安装器里）<ul>
+<li>远程控制软件可以选择安装在单独的电脑上（可以基于 Windows 或 Mac），来节省运行 DAW 这台电脑的屏幕空间</li>
+</ul>
+</li>
+</ul>
+<ol start="3">
+<li>一台同步外围设备，用于为 RMW 生成纵向时间码，并将 DAW 的时钟与 RMW 的 Word Clock 同步。或者也可以在 DAW 中运行 Dolby LTC Generator 插件来生成纵向时间码</li>
+</ol>
+<p><strong>信号流</strong></p>
+<p><img src="https://cdn.staticaly.com/gh/AlistarOfficial/Image-saving@master/RME-MADIface-XT%E4%BF%A1%E5%8F%B7%E6%B5%81-%E4%B8%AD%E6%96%87.2yqvb3rbff00.jpg"></p>
+<h1 id="三-使用-Dante-I-x2F-O-的-RMW-工作站"><a href="#三-使用-Dante-I-x2F-O-的-RMW-工作站" class="headerlink" title="三. 使用 Dante I &#x2F; O 的 RMW 工作站"></a>三. 使用 Dante I &#x2F; O 的 RMW 工作站</h1><p>Dolby Atmos Mastering Suite 3.0 版本支持 RMW 使用 Dante 协议进行音频信号的输入输出，RMW 可以基于 Windows 或 Mac 系统。基于 Dante 协议的工作站配置在两个平台上都差不多。</p>
+<p>比起 MADI，基于 Dante 的 RMW 需要的连接更少，但路由和配置会更复杂。如果是首次使用 Dante 系统，推荐观看 Audinate 提供的“Getting Started with Dante”和“Dante Controller 101”系列视频：</p>
+<p><a href="https://www.audinate.com/learning/training-certification/video-tutorials">https://www.audinate.com/learning/training-certification/video-tutorials</a></p>
+<p><strong>主要组件</strong></p>
+<ol>
+<li>一台 Dolby Atmos RMW，可以是专门的自定义的 Windows Dell 7920 或者经过认证的 Mac OS 配置。该工作站包含以下组件：</li>
+</ol>
+<ul>
+<li>预装的Focusrite RedNet PCIeR Dante 卡（如果工作站电脑是 Mac Mini 或者 Mac Pro 6，就需要用认证的 PCIe 雷电扩展机架，根据 Mac 的不同型号，可以是雷电 2 或者雷电 3。）</li>
+<li>安装 Dolby Atmos Renderer 软件，并用提供的 Dolby Atmos Mastering Suite License 进行授权</li>
+<li>一个 Audinate 的模拟转 Dante 转换器，用于纵向时间码。</li>
+</ul>
+<ol start="2">
+<li>一个 Mac 系统下的运行支持软件的 DAW。包含以下组件：</li>
+</ol>
+<ul>
+<li>原生支持 Atmos Panner 并且能够直连 Renderer 的 DAW，或者能够使用 Dolby Atmos Music Panner 插件的 DAW</li>
+<li>一台连接 Dante I &#x2F; O 的硬件</li>
+<li>Dolby Atmos Renderer 的远程控制软件（包含在 Renderer 的安装器里）<ul>
+<li>远程控制软件可以选择安装在单独的电脑上（可以基于 Windows 或 Mac），来节省运行 DAW 这台电脑的屏幕空间</li>
+</ul>
+</li>
+</ul>
+<ol start="3">
+<li>一台兼容 Dante 协议的网络交换机，交换机上的设备需要以星形拓扑结构连接（即每个设备都必须直连到交换机上）。</li>
+<li>一台同步外围设备，用于为 RMW 生成纵向时间码，并将 DAW 的时钟与 RMW 的 Word Clock 同步。或者也可以在 DAW 中运行 Dolby LTC Generator 插件来生成纵向时间码</li>
+</ol>
+<p><strong>信号流</strong></p>
+<p><img src="https://cdn.staticaly.com/gh/AlistarOfficial/Image-saving@master/Dante%E7%B3%BB%E7%BB%9F%E4%BF%A1%E5%8F%B7%E6%B5%81-%E4%B8%AD%E6%96%87.1bm6cku3tcqo.jpg"></p>
+<h1 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h1><p>这篇文章主要适用于大型录音棚 &#x2F; 工作室，如果你想要了解在 DAW 的同一电脑上运行 Renderer 的配置，之后更新的两篇文章中会详细说明，欢迎关注。</p>
+]]></content>
+      <categories>
+        <category>混音知识</category>
+      </categories>
+      <tags>
+        <tag>译制教程</tag>
+        <tag>全景声</tag>
+        <tag>dolbyatmos</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>杜比全景声后期制作官方教程 1.3 杜比全景声内容信号流</title>
     <url>/2023/02/27/%E6%9D%9C%E6%AF%94%E5%85%A8%E6%99%AF%E5%A3%B0%E5%AE%98%E6%96%B9%E6%95%99%E7%A8%8B-1-3-%E6%9D%9C%E6%AF%94%E5%85%A8%E6%99%AF%E5%A3%B0%E5%86%85%E5%AE%B9%E4%BF%A1%E5%8F%B7%E6%B5%81/</url>
     <content><![CDATA[<blockquote>

@@ -17,7 +17,7 @@
         name="viewport"
         content="width=device-width, initial-scale=1, maximum-scale=1"
       />
-      <title>杜比全景声后期制作官方教程 1.3 杜比全景声内容信号流 |  啊嘞</title>
+      <title>杜比全景声官方后期制作教程 2.1 在外部工作站上运行 Dolby Atmos Renderer |  啊嘞</title>
   <meta name="generator" content="hexo-theme-ayer">
       
       <link rel="shortcut icon" href="/favicon.ico" />
@@ -79,7 +79,7 @@ var _hmt = _hmt || [];
     <main class="content on">
       <section class="outer">
   <article
-  id="post-杜比全景声官方教程-1-3-杜比全景声内容信号流"
+  id="post-杜比全景声官方后期制作教程-2-1-在外部工作站上运行-Dolby-Atmos-Renderer"
   class="article article-type-post"
   itemscope
   itemprop="blogPost"
@@ -90,7 +90,7 @@ var _hmt = _hmt || [];
     <header class="article-header">
        
 <h1 class="article-title sea-center" style="border-left:0" itemprop="name">
-  杜比全景声后期制作官方教程 1.3 杜比全景声内容信号流
+  杜比全景声官方后期制作教程 2.1 在外部工作站上运行 Dolby Atmos Renderer
 </h1>
  
 
@@ -98,8 +98,8 @@ var _hmt = _hmt || [];
     </header>
      
     <div class="article-meta">
-      <a href="/2023/02/27/%E6%9D%9C%E6%AF%94%E5%85%A8%E6%99%AF%E5%A3%B0%E5%AE%98%E6%96%B9%E6%95%99%E7%A8%8B-1-3-%E6%9D%9C%E6%AF%94%E5%85%A8%E6%99%AF%E5%A3%B0%E5%86%85%E5%AE%B9%E4%BF%A1%E5%8F%B7%E6%B5%81/" class="article-date">
-  <time datetime="2023-02-27T12:52:49.000Z" itemprop="datePublished">2023-02-27</time>
+      <a href="/2023/03/07/%E6%9D%9C%E6%AF%94%E5%85%A8%E6%99%AF%E5%A3%B0%E5%AE%98%E6%96%B9%E5%90%8E%E6%9C%9F%E5%88%B6%E4%BD%9C%E6%95%99%E7%A8%8B-2-1-%E5%9C%A8%E5%A4%96%E9%83%A8%E5%B7%A5%E4%BD%9C%E7%AB%99%E4%B8%8A%E8%BF%90%E8%A1%8C-Dolby-Atmos-Renderer/" class="article-date">
+  <time datetime="2023-03-06T16:46:40.000Z" itemprop="datePublished">2023-03-07</time>
 </a> 
   <div class="article-category">
     <a class="article-category-link" href="/categories/%E6%B7%B7%E9%9F%B3%E7%9F%A5%E8%AF%86/">混音知识</a>
@@ -110,7 +110,7 @@ var _hmt = _hmt || [];
         <span class="post-meta-item-icon">
             <i class="ri-quill-pen-line"></i>
             <span class="post-meta-item-text"> 字数统计:</span>
-            <span class="post-count">491</span>
+            <span class="post-count">1.5k</span>
         </span>
     </span>
 
@@ -119,7 +119,7 @@ var _hmt = _hmt || [];
         <span class="post-meta-item-icon">
             <i class="ri-book-open-line"></i>
             <span class="post-meta-item-text"> 阅读时长≈</span>
-            <span class="post-count">1 分钟</span>
+            <span class="post-count">5 分钟</span>
         </span>
     </span>
 </div>
@@ -135,25 +135,104 @@ var _hmt = _hmt || [];
     <div class="article-entry" itemprop="articleBody">
        
   <blockquote>
-<p>本节讲述了 Dolby Atmos Renderer 的九个核心功能以及使用外部工作站运行 Renderer 时的信号流，敬请查收。</p>
+<p>Dolby Atmos Renderer 是一款广泛应用于音乐、电影和游戏领域的音频处理软件，其能够在不同的硬件平台上实现音频的渲染和母带制作。本文将重点介绍该软件在 Rendering And Mastering Workstations 上的应用，包括基于 MADI 和 Dante 协议的不同配置，以及配套使用的数字音频工作站和相关外围设备等。对于音频制作工作者和相关领域的从业者而言，了解 Dolby Atmos Renderer 在不同平台和配置下的应用和优势，将有助于提高工作效率和音频制作质量。</p>
 </blockquote>
+<p><em>翻译：Alistar</em></p>
+<p><em>原文：Dolby Atmos Music 教程</em></p>
 <span id="more"></span>
 
-<h1 id="Dolby-Atmos-Renderer-的核心功能"><a href="#Dolby-Atmos-Renderer-的核心功能" class="headerlink" title="Dolby Atmos Renderer 的核心功能"></a>Dolby Atmos Renderer 的核心功能</h1><p>Dolby Atmos Renderer 有以下九个核心功能：</p>
+<h1 id="一-简介"><a href="#一-简介" class="headerlink" title="一. 简介"></a>一. 简介</h1><p>在外部工作站运行的 Dolby Atmos Renderer 是 Dolby Atmos Renderer 的<strong>旗舰配置</strong>，需要使用 <code>Dolby Atmos Mastering Suite</code> 授权。这套配置推荐用于复杂的 Dolby Atmos 内容创作，因为它把渲染器和 DAW 需要的 CPU 资源分到两台电脑上负荷，并且还可以让多个数字工作站同时作为 Dolby Atmos Renderer 的信号源，以便在各个工作站中独立地进行预混音或者编辑工作。</p>
+<p>外部运行的 Rendering and Mastering 工作站（以下简称 RMW）需要从 Dolby 经销商处购买，到手之前会预配置及测试所有需要的硬件和软件。</p>
+<h1 id="二-使用-MADI-的-RMW-工作站"><a href="#二-使用-MADI-的-RMW-工作站" class="headerlink" title="二. 使用 MADI 的 RMW 工作站"></a>二. 使用 MADI 的 RMW 工作站</h1><p><img src="https://cdn.staticaly.com/gh/AlistarOfficial/Image-saving@master/RMWs-with-madi-io.2sgw7nb2v9o0.jpg"></p>
+<p>RMW 使用 MADI（多通道音频接口，Multi Channel Audio Interface）和 DAW 间往来数字音频信号，主要有三种配置：两种基于 Windows 的配置和一种基于 Mac 的配置。</p>
+<h3 id="MADI-配置-1：RME-HDSPe-及-RME-MADI-FX"><a href="#MADI-配置-1：RME-HDSPe-及-RME-MADI-FX" class="headerlink" title="MADI 配置 1：RME HDSPe 及 RME MADI FX"></a>MADI 配置 1：RME HDSPe 及 RME MADI FX</h3><p><strong>主要组件</strong></p>
 <ol>
-<li>录制与纵向时间码同步的音床 &#x2F; 声音对象及对象元数据信息，输出为 Master File Set 母带文件集。</li>
-<li>在 Master Files 中包含了适用于 <code>Dolby Digital Plus JOC</code> 编码的 Downmix &#x2F; Trim 元数据，以及适用于编码及监听双耳音频的元数据。</li>
-<li>可以将 Master Files 导出为不同的夹层格式：<code>ADM BWF</code>（.wav）以及 <code>IMF IAB</code>（.mxf），可以全长导出或者编辑头尾后导出。</li>
-<li>可以导出 Master Files 为 <code>.mp4</code> 格式，便于在消费级重放设备上检查成品质量。</li>
-<li>可以基于 5.1 重渲染音频进行实时或离线的响度测量，并导出结果或者详细日志。</li>
-<li>能够选择是否应用空间编码模拟来监听渲染到附加扬声器配置上的杜比全景声音乐或者 Master Files。</li>
-<li>能够监听重渲染后的 Downmix 音频：7.1，5.1 以及立体声（或者自定义规格的音频，如 5.1.2）</li>
-<li>能够用耳机监听立体声信号或者双耳重渲染音频。</li>
-<li>能够实时监听或者离线导出重渲染内容。重渲染内容可以是完整的混音，如果使用了多音床输入，并且自定义了分组的话，重渲染内容也可以是单独的 Stem。</li>
+<li>在自定义的 Dell 7920 工作站上运行的Dolby Atmos RMW 包含以下组件：</li>
 </ol>
-<h1 id="Dolby-Atmos-内容的信号流"><a href="#Dolby-Atmos-内容的信号流" class="headerlink" title="Dolby Atmos 内容的信号流"></a>Dolby Atmos 内容的信号流</h1><p>下图展示了在外部工作站环境下创作杜比全景声内容时的音频，元数据，时间码，配置文件以及系统要求的来往日志等信息的信号流向。</p>
-<p><img src="https://cdn.staticaly.com/gh/AlistarOfficial/Image-saving@master/%E4%BF%A1%E5%8F%B7%E6%B5%81%E8%AF%B4%E6%98%8E.1p2tdsef84xs.jpg"></p>
-<h1 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h1><p>以上就是杜比全景声官方教程 1.3 部分的内容，该系列文章保持周更，欢迎关注。</p>
+<ul>
+<li>RME HPSPe 配置<ul>
+<li>预装两张 RME HDSPe MADI 卡，用于 128 个通道的 I &#x2F; O</li>
+<li>预装一张 RME TCO 卡 用于 LTC 纵向时间码  及时钟输入</li>
+<li>安装 Dolby Atmos Renderer 软件，并用提供的 Dolby Atmos Mastering Suite License 进行授权</li>
+</ul>
+</li>
+<li>RME MADI FX 配置<ul>
+<li>预装一张 MADI FX 卡，用于至少 128 个通道的 I &#x2F; O</li>
+<li>安装 Dolby Atmos Renderer 软件，并用提供的 Dolby Atmos Mastering Suite License 进行授权</li>
+</ul>
+</li>
+</ul>
+<ol start="2">
+<li>运行支持软件的 DAW 系统包含以下组件：</li>
+</ol>
+<ul>
+<li>原生支持 Atmos Panner 并且能够直连 Renderer 的 DAW，或者能够使用 Dolby Atmos Music Panner 插件的 DAW</li>
+<li>一台连接 128 个通道 MADI I &#x2F; O 的硬件</li>
+<li>Dolby Atmos Renderer 的远程控制软件（包含在 Renderer 的安装器里）<ul>
+<li>远程控制软件可以选择安装在单独的电脑上（可以基于 Windows 或 Mac），来节省运行 DAW 这台电脑的屏幕空间</li>
+</ul>
+</li>
+</ul>
+<ol start="3">
+<li>一台同步外围设备，用于为 RMW 生成纵向时间码，并将 DAW 的时钟与 RMW 的 Word Clock 同步</li>
+</ol>
+<p><strong>信号流</strong></p>
+<p>RME HDSPe（左图）及 RME MADI FX（右图）</p>
+<p><img src="https://cdn.staticaly.com/gh/AlistarOfficial/Image-saving@master/RME-HDSPe%E5%8F%8ARME-MADI-FX%E4%BF%A1%E5%8F%B7%E6%B5%81-%E4%B8%AD%E6%96%87.5nydmzqx5u80.jpg"></p>
+<h3 id="MADI-配置-2：RME-MADIface-XT"><a href="#MADI-配置-2：RME-MADIface-XT" class="headerlink" title="MADI 配置 2：RME MADIface XT"></a>MADI 配置 2：RME MADIface XT</h3><p><strong>主要组件</strong></p>
+<ol>
+<li>一台 Dolby Atmos RMW，可以是专门的自定义的 Windows Dell 7920 或者经过认证的 Mac OS 配置。该工作站包含以下组件：</li>
+</ol>
+<ul>
+<li>RME MADIface XT USB 3.0 接口</li>
+<li>安装 Dolby Atmos Renderer 软件，并用提供的 Dolby Atmos Mastering Suite License 进行授权</li>
+</ul>
+<ol start="2">
+<li>运行支持软件的 DAW 系统包含以下组件：</li>
+</ol>
+<ul>
+<li>原生支持 Atmos Panner 并且能够直连 Renderer 的 DAW，或者能够使用 Dolby Atmos Music Panner 插件的 DAW</li>
+<li>一台连接 128 个通道 MADI I &#x2F; O 的硬件</li>
+<li>Dolby Atmos Renderer 的远程控制软件（包含在 Renderer 的安装器里）<ul>
+<li>远程控制软件可以选择安装在单独的电脑上（可以基于 Windows 或 Mac），来节省运行 DAW 这台电脑的屏幕空间</li>
+</ul>
+</li>
+</ul>
+<ol start="3">
+<li>一台同步外围设备，用于为 RMW 生成纵向时间码，并将 DAW 的时钟与 RMW 的 Word Clock 同步。或者也可以在 DAW 中运行 Dolby LTC Generator 插件来生成纵向时间码</li>
+</ol>
+<p><strong>信号流</strong></p>
+<p><img src="https://cdn.staticaly.com/gh/AlistarOfficial/Image-saving@master/RME-MADIface-XT%E4%BF%A1%E5%8F%B7%E6%B5%81-%E4%B8%AD%E6%96%87.2yqvb3rbff00.jpg"></p>
+<h1 id="三-使用-Dante-I-x2F-O-的-RMW-工作站"><a href="#三-使用-Dante-I-x2F-O-的-RMW-工作站" class="headerlink" title="三. 使用 Dante I &#x2F; O 的 RMW 工作站"></a>三. 使用 Dante I &#x2F; O 的 RMW 工作站</h1><p>Dolby Atmos Mastering Suite 3.0 版本支持 RMW 使用 Dante 协议进行音频信号的输入输出，RMW 可以基于 Windows 或 Mac 系统。基于 Dante 协议的工作站配置在两个平台上都差不多。</p>
+<p>比起 MADI，基于 Dante 的 RMW 需要的连接更少，但路由和配置会更复杂。如果是首次使用 Dante 系统，推荐观看 Audinate 提供的“Getting Started with Dante”和“Dante Controller 101”系列视频：</p>
+<p><a target="_blank" rel="noopener" href="https://www.audinate.com/learning/training-certification/video-tutorials">https://www.audinate.com/learning/training-certification/video-tutorials</a></p>
+<p><strong>主要组件</strong></p>
+<ol>
+<li>一台 Dolby Atmos RMW，可以是专门的自定义的 Windows Dell 7920 或者经过认证的 Mac OS 配置。该工作站包含以下组件：</li>
+</ol>
+<ul>
+<li>预装的Focusrite RedNet PCIeR Dante 卡（如果工作站电脑是 Mac Mini 或者 Mac Pro 6，就需要用认证的 PCIe 雷电扩展机架，根据 Mac 的不同型号，可以是雷电 2 或者雷电 3。）</li>
+<li>安装 Dolby Atmos Renderer 软件，并用提供的 Dolby Atmos Mastering Suite License 进行授权</li>
+<li>一个 Audinate 的模拟转 Dante 转换器，用于纵向时间码。</li>
+</ul>
+<ol start="2">
+<li>一个 Mac 系统下的运行支持软件的 DAW。包含以下组件：</li>
+</ol>
+<ul>
+<li>原生支持 Atmos Panner 并且能够直连 Renderer 的 DAW，或者能够使用 Dolby Atmos Music Panner 插件的 DAW</li>
+<li>一台连接 Dante I &#x2F; O 的硬件</li>
+<li>Dolby Atmos Renderer 的远程控制软件（包含在 Renderer 的安装器里）<ul>
+<li>远程控制软件可以选择安装在单独的电脑上（可以基于 Windows 或 Mac），来节省运行 DAW 这台电脑的屏幕空间</li>
+</ul>
+</li>
+</ul>
+<ol start="3">
+<li>一台兼容 Dante 协议的网络交换机，交换机上的设备需要以星形拓扑结构连接（即每个设备都必须直连到交换机上）。</li>
+<li>一台同步外围设备，用于为 RMW 生成纵向时间码，并将 DAW 的时钟与 RMW 的 Word Clock 同步。或者也可以在 DAW 中运行 Dolby LTC Generator 插件来生成纵向时间码</li>
+</ol>
+<p><strong>信号流</strong></p>
+<p><img src="https://cdn.staticaly.com/gh/AlistarOfficial/Image-saving@master/Dante%E7%B3%BB%E7%BB%9F%E4%BF%A1%E5%8F%B7%E6%B5%81-%E4%B8%AD%E6%96%87.1bm6cku3tcqo.jpg"></p>
+<h1 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h1><p>这篇文章主要适用于大型录音棚 &#x2F; 工作室，如果你想要了解在 DAW 的同一电脑上运行 Renderer 的配置，之后更新的两篇文章中会详细说明，欢迎关注。</p>
  
       <!-- reward -->
       
@@ -206,7 +285,7 @@ var _hmt = _hmt || [];
     <a class="modal-close" href="javascript:;"><i class="ri-close-circle-line"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://alistarofficial.github.io/2023/02/27/%E6%9D%9C%E6%AF%94%E5%85%A8%E6%99%AF%E5%A3%B0%E5%AE%98%E6%96%B9%E6%95%99%E7%A8%8B-1-3-%E6%9D%9C%E6%AF%94%E5%85%A8%E6%99%AF%E5%A3%B0%E5%86%85%E5%AE%B9%E4%BF%A1%E5%8F%B7%E6%B5%81/" alt="微信分享二维码">
+      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://alistarofficial.github.io/2023/03/07/%E6%9D%9C%E6%AF%94%E5%85%A8%E6%99%AF%E5%A3%B0%E5%AE%98%E6%96%B9%E5%90%8E%E6%9C%9F%E5%88%B6%E4%BD%9C%E6%95%99%E7%A8%8B-2-1-%E5%9C%A8%E5%A4%96%E9%83%A8%E5%B7%A5%E4%BD%9C%E7%AB%99%E4%B8%8A%E8%BF%90%E8%A1%8C-Dolby-Atmos-Renderer/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -219,19 +298,10 @@ var _hmt = _hmt || [];
    
   <nav class="article-nav">
     
-      <a href="/2023/03/07/%E6%9D%9C%E6%AF%94%E5%85%A8%E6%99%AF%E5%A3%B0%E5%AE%98%E6%96%B9%E5%90%8E%E6%9C%9F%E5%88%B6%E4%BD%9C%E6%95%99%E7%A8%8B-2-1-%E5%9C%A8%E5%A4%96%E9%83%A8%E5%B7%A5%E4%BD%9C%E7%AB%99%E4%B8%8A%E8%BF%90%E8%A1%8C-Dolby-Atmos-Renderer/" class="article-nav-link">
-        <strong class="article-nav-caption">上一篇</strong>
-        <div class="article-nav-title">
-          
-            杜比全景声官方后期制作教程 2.1 在外部工作站上运行 Dolby Atmos Renderer
-          
-        </div>
-      </a>
     
-    
-      <a href="/2023/02/27/%E6%9D%9C%E6%AF%94%E5%85%A8%E6%99%AF%E5%A3%B0%E5%AE%98%E6%96%B9%E6%95%99%E7%A8%8B-1-2-Dolby-Atmos-%E7%BB%84%E4%BB%B6/" class="article-nav-link">
+      <a href="/2023/02/27/%E6%9D%9C%E6%AF%94%E5%85%A8%E6%99%AF%E5%A3%B0%E5%AE%98%E6%96%B9%E6%95%99%E7%A8%8B-1-3-%E6%9D%9C%E6%AF%94%E5%85%A8%E6%99%AF%E5%A3%B0%E5%86%85%E5%AE%B9%E4%BF%A1%E5%8F%B7%E6%B5%81/" class="article-nav-link">
         <strong class="article-nav-caption">下一篇</strong>
-        <div class="article-nav-title">杜比全景声后期制作官方教程 1.2 Dolby Atmos 组件</div>
+        <div class="article-nav-title">杜比全景声后期制作官方教程 1.3 杜比全景声内容信号流</div>
       </a>
     
   </nav>
